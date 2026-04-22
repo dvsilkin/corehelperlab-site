@@ -2,21 +2,266 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Terms of Service | Core Helper Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Fitence: Workout Planner</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; }
-        h1 { border-bottom: 2px solid #000; padding-bottom: 10px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header { margin-bottom: 60px; }
+        header a {
+            font-size: 0.9rem;
+            color: #888;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        header a:hover { color: #000; }
+        h1 { font-size: 3rem; font-weight: 800; margin: 16px 0 10px; letter-spacing: -0.02em; }
+        .meta { font-size: 1rem; color: #555; margin-bottom: 0; }
+        main { flex-grow: 1; }
+        .intro {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #eee;
+        }
+        .section { margin-bottom: 48px; }
+        .section-number {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 16px;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 24px 0 8px;
+            color: #111;
+        }
+        p { margin: 0 0 12px; font-size: 1rem; }
+        ul {
+            padding-left: 20px;
+            margin: 8px 0 16px;
+        }
+        ul li { margin-bottom: 6px; font-size: 1rem; }
+        .warning {
+            background: #f7f7f7;
+            border-left: 3px solid #000;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+        a { color: #000; text-decoration: underline; font-weight: 500; }
+        a:hover { text-decoration: none; }
+        .contact-block {
+            background: #f7f7f7;
+            padding: 16px 20px;
+            margin-top: 12px;
+            font-size: 1rem;
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        footer nav { margin-bottom: 8px; }
+        footer a { color: #000; }
     </style>
 </head>
 <body>
-    <h1>Terms of Service</h1>
-    <p>Last updated: April 2026</p>
-    <p>By using applications developed by Core Helper Lab, you agree to these terms.</p>
-    <h2>1. Use License</h2>
-    <p>We grant you a personal, non-exclusive license to use our software for personal, non-commercial purposes.</p>
-    <h2>2. Disclaimer</h2>
-    <p>Our tools are provided "as is". Use them at your own risk, especially during fitness activities.</p>
-    <h2>3. Contact</h2>
-    <p>info@corehelperlab.com</p>
+
+    <header>
+        <a href="index.html">← Core Helper Lab</a>
+        <h1>Terms of Service</h1>
+        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Last updated: April 23, 2026</p>
+    </header>
+
+    <main>
+
+        <p class="intro">
+            These Terms govern your use of the mobile application
+            <strong>Fitence: Workout Planner</strong>, developed by Core Helper Lab.
+            By using the App, you agree to these Terms.
+        </p>
+
+        <!-- 1 -->
+        <div class="section">
+            <div class="section-number">Section 1</div>
+            <h2>General Conditions</h2>
+            <p>The App is provided "as is". We do not guarantee:</p>
+            <ul>
+                <li>error-free operation;</li>
+                <li>uninterrupted availability;</li>
+                <li>data preservation.</li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="section">
+            <div class="section-number">Section 2</div>
+            <h2>User Data</h2>
+            <p>You are responsible for the accuracy of your data and backups. Without an account, data is stored locally on your device.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="section">
+            <div class="section-number">Section 3</div>
+            <h2>Account and Sync</h2>
+            <p>If you use Google / Apple ID:</p>
+            <ul>
+                <li>data is synced via Firebase;</li>
+                <li>access depends on third-party providers.</li>
+            </ul>
+            <p>We cannot restore access to third-party accounts.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="section">
+            <div class="section-number">Section 4</div>
+            <h2>Medical Disclaimer</h2>
+            <div class="warning">
+                The App is not a medical service. You are responsible for your health and training decisions. Consult a doctor before starting any exercise program.
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="section">
+            <div class="section-number">Section 5</div>
+            <h2>AI Features</h2>
+            <p>AI analysis:</p>
+            <ul>
+                <li>is informational only;</li>
+                <li>is not professional advice;</li>
+                <li>is used at your own risk.</li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="section">
+            <div class="section-number">Section 6</div>
+            <h2>Subscriptions and Purchases</h2>
+
+            <h3>6.1 Types</h3>
+            <ul>
+                <li><strong>Premium subscription</strong> — weekly, monthly, or annual;</li>
+                <li><strong>One-time ad removal</strong> — permanent ad-free experience via a single payment.</li>
+            </ul>
+
+            <h3>6.2 Billing</h3>
+            <ul>
+                <li>Subscriptions auto-renew at the end of each period.</li>
+                <li>Subscriptions must be cancelled at least 24 hours before the renewal date to avoid being charged for the next period. After cancellation, access to Premium remains active until the end of the paid period.</li>
+                <li>Payments are processed via App Store / Google Play.</li>
+                <li>Cancellation is handled via your store account settings.</li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="section">
+            <div class="section-number">Section 7</div>
+            <h2>Important Payment Notice</h2>
+            <p>Payments are handled exclusively by Apple App Store and Google Play. Apple Inc. and Google LLC:</p>
+            <ul>
+                <li>are not parties to these Terms;</li>
+                <li>are not responsible for the App;</li>
+                <li>are responsible only for payment processing within their platforms.</li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="section">
+            <div class="section-number">Section 8</div>
+            <h2>Advertising</h2>
+            <p>Ads may be shown in the free version via Google AdMob. We are not responsible for third-party ad content.</p>
+        </div>
+
+        <!-- 9 -->
+        <div class="section">
+            <div class="section-number">Section 9</div>
+            <h2>Intellectual Property</h2>
+            <p>All rights belong to Core Helper Lab. You may not:</p>
+            <ul>
+                <li>copy;</li>
+                <li>reverse engineer;</li>
+                <li>distribute the App.</li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="section">
+            <div class="section-number">Section 10</div>
+            <h2>Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, we are not liable for:</p>
+            <ul>
+                <li>indirect damages;</li>
+                <li>loss of data;</li>
+                <li>lost profits;</li>
+                <li>damages from use or inability to use the App.</li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="section">
+            <div class="section-number">Section 11</div>
+            <h2>Age Requirement</h2>
+            <p>The App is intended for users <strong>13 years and older</strong>.</p>
+        </div>
+
+        <!-- 12 -->
+        <div class="section">
+            <div class="section-number">Section 12</div>
+            <h2>Changes</h2>
+            <p>We may update these Terms. Continued use of the App after changes take effect constitutes acceptance of the updated Terms.</p>
+        </div>
+
+        <!-- 13 -->
+        <div class="section">
+            <div class="section-number">Section 13</div>
+            <h2>Governing Law</h2>
+            <p>These Terms are governed by the laws of Ukraine.</p>
+        </div>
+
+        <!-- 14 -->
+        <div class="section">
+            <div class="section-number">Section 14</div>
+            <h2>Contact</h2>
+            <div class="contact-block">
+                <strong>Core Helper Lab</strong><br>
+                Email: <a href="mailto:info@corehelperlab.com">info@corehelperlab.com</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="mailto:info@corehelperlab.com">Contact Support</a>
+        </nav>
+        <p>&copy; 2026 Core Helper Lab. Built for focus.</p>
+    </footer>
+
 </body>
 </html>
