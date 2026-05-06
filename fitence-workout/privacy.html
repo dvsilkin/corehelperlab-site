@@ -158,7 +158,7 @@
     <header>
         <a href="index.html">← Fitence: Workout Planner</a>
         <h1>Privacy Policy</h1>
-        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Effective date: April 23, 2026</p>
+        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Effective date: May 6, 2026</p>
     </header>
 
     <main>
@@ -221,8 +221,8 @@
                     sign in via Google or Apple.</li>
                 <li><strong>Health & Fitness Data:</strong> We process your workout history, exercise data, and body metrics such as
                     weight, height, and date of birth.</li>
-                <li><strong>App Activity:</strong> We track in-app events and feature usage via Firebase Analytics to improve our
-                    services.</li>
+                <li><strong>App Activity:</strong> We track in-app events and feature usage via Firebase Analytics and Mixpanel to improve our
+                    services. A pseudonymous device identifier (Firebase App Instance ID) is used — no name, email, or other personal data is associated with analytics.</li>
                 <li><strong>App Info & Performance:</strong> We collect crash logs and diagnostic data through Firebase Crashlytics to
                     maintain app stability.</li>
                 <li><strong>Device Identifiers:</strong> With your explicit consent, we may use your Advertising ID / IDFA for AdMob.</li>
@@ -289,6 +289,21 @@
             <p>Payment information is processed only by App Store / Google Play.<br>
                 RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank"
                     rel="noopener">revenuecat.com/privacy</a></p>
+
+            <h3>4.4 Mixpanel (Mixpanel, Inc.)</h3>
+            <p>Used for product analytics and user behavior analysis. Data processed includes:</p>
+            <ul>
+                <li>pseudonymous device identifier (Firebase App Instance ID) — not linked to your name or email;</li>
+                <li>in-app events (e.g., workout started, purchase completed);</li>
+                <li>behavioral properties (e.g., subscription status, workout count, platform);</li>
+                <li>subscription revenue data received via server-side integration with RevenueCat.</li>
+            </ul>
+            <p>
+                No personally identifiable information (name, email, phone number) is sent to Mixpanel.
+                Data is stored on <strong>EU-based servers</strong> (EU Data Residency is enabled).
+            </p>
+            <p>Mixpanel Privacy Policy: <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank"
+                    rel="noopener">mixpanel.com/legal/privacy-policy</a></p>
         </div>
 
         <!-- 5 -->
@@ -357,7 +372,7 @@
                 <li>HTTPS/TLS encryption;</li>
                 <li>access control;</li>
                 <li>Firebase Security Rules;</li>
-                <li>international data transfers (to Firebase / RevenueCat servers located in the United States) carried
+                <li>international data transfers (to Firebase / RevenueCat servers located in the United States, and Mixpanel servers located in the European Union) carried
                     out under Standard Contractual Clauses (SCC) as approved by the European Commission.</li>
             </ul>
         </div>
