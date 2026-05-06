@@ -552,18 +552,25 @@
       background: var(--surf);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      overflow: hidden;
+      /* overflow: hidden убран — он блокировал скролл первого скриншота на мобильных */
     }
 
     .screens-row {
       display: flex;
       gap: 20px;
-      justify-content: center;
+      /* justify-content: center убран — при overflow-x: auto центрирование уводит
+         левый край за пределы прокрутки и первый элемент становится недостижим.
+         Вместо этого используем padding через max() для центрирования на десктопе. */
       flex-wrap: nowrap;
       overflow-x: auto;
-      padding: 20px 24px 32px;
+      /* 5 карточек × 210px + 4 gap × 20px = 1130px суммарная ширина.
+         На экране шире 1178px (1130 + 2×24) контент помещается целиком —
+         max() даст достаточный отступ чтобы ряд выглядел центрированным.
+         На мобильных max() вернёт 24px и скролл начинается от первой карточки. */
+      padding: 20px max(24px, calc((100vw - 1130px) / 2)) 32px;
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
     }
 
     .screens-row::-webkit-scrollbar {
@@ -581,6 +588,7 @@
       box-shadow: 0 24px 48px rgba(0, 0, 0, .5);
       position: relative;
       transition: transform .3s;
+      scroll-snap-align: start;
     }
 
     .screen-card:hover {
