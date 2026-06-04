@@ -121,25 +121,73 @@
     }
 
     .lang-switcher {
+      position: relative;
+    }
+
+    .lang-selected {
       display: flex;
-      gap: 4px;
+      align-items: center;
+      gap: 6px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 5px 12px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--txt);
+      transition: border-color .2s;
+      user-select: none;
+    }
+
+    .lang-selected:hover {
+      border-color: var(--acc);
+    }
+
+    .lang-selected svg {
+      width: 12px;
+      height: 12px;
+      opacity: 0.5;
+      transition: transform .2s;
+    }
+
+    .lang-switcher.open .lang-selected svg {
+      transform: rotate(180deg);
+    }
+
+    .lang-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 4px;
+      min-width: 80px;
+      z-index: 100;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    .lang-switcher.open .lang-dropdown {
+      display: block;
     }
 
     .lang-btn {
+      display: block;
+      width: 100%;
       background: none;
       border: none;
       color: var(--muted);
       font-family: 'DM Sans', sans-serif;
       font-size: 13px;
       font-weight: 500;
-      padding: 5px 12px;
+      padding: 6px 12px;
       border-radius: 7px;
       cursor: pointer;
       transition: all .2s;
+      text-align: left;
     }
 
     .lang-btn.active {
@@ -1032,14 +1080,22 @@
   <header>
     <nav class="container">
       <a href="#" class="nav-logo"><span>Fit</span>ence</a>
-      <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" onclick="setLang('ru')">RU</button>
-        <button class="lang-btn" onclick="setLang('ua')">UA</button>
-        <button class="lang-btn" onclick="setLang('fr')">FR</button>
-        <button class="lang-btn" onclick="setLang('de')">DE</button>
-        <button class="lang-btn" onclick="setLang('es')">ES</button>
-        <button class="lang-btn" onclick="setLang('it')">IT</button>
+      <div class="lang-switcher" id="langSwitcher">
+        <div class="lang-selected" onclick="toggleLangDropdown()">
+          <span id="langLabel">EN</span>
+          <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="lang-dropdown">
+          <button class="lang-btn active" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" onclick="setLang('ru')">RU</button>
+          <button class="lang-btn" onclick="setLang('ua')">UA</button>
+          <button class="lang-btn" onclick="setLang('fr')">FR</button>
+          <button class="lang-btn" onclick="setLang('de')">DE</button>
+          <button class="lang-btn" onclick="setLang('es')">ES</button>
+          <button class="lang-btn" onclick="setLang('it')">IT</button>
+        </div>
       </div>
     </nav>
   </header>
@@ -1839,9 +1895,20 @@
       });
     }
 
+    function toggleLangDropdown() {
+      document.getElementById('langSwitcher').classList.toggle('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      const sw = document.getElementById('langSwitcher');
+      if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+    });
+
     function setLang(lang) {
       currentLang = lang;
       localStorage.setItem('fitence_lang', lang);
+      document.getElementById('langSwitcher').classList.remove('open');
+      document.getElementById('langLabel').textContent = lang.toUpperCase();
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.classList.toggle('active', b.textContent.toLowerCase() === lang);
       });
