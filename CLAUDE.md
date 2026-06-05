@@ -59,4 +59,3 @@
 
 ## Связанные проекты
 - Мобильное приложение: https://github.com/dvsilkin/fitness_app
-- CMS: https://github.com/cardmates-dreamers (отдельная организация)
