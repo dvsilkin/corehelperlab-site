@@ -1438,6 +1438,29 @@
 
 
   <script>
+    // Soft language redirect: only on the en / x-default page, only when the
+    // visitor has not picked a language yet, once per session, never for bots
+    // that don't send a matching browser language. Each localized page is still
+    // independently indexable (this runs client-side after load).
+    (function () {
+      try {
+        if (document.documentElement.lang !== 'en') return;           // only x-default
+        var saved = localStorage.getItem('fitence_lang');
+        if (saved === 'en') return;                                    // user chose English
+        var seg2path = { ru: 'ru', uk: 'ua', fr: 'fr', de: 'de', es: 'es', it: 'it' };
+        var target = (saved && saved !== 'en') ? saved : null;         // honor a stored choice
+        if (!target) {
+          if (sessionStorage.getItem('fitence_redirected')) return;    // auto-detect once per session
+          var b = (navigator.language || navigator.userLanguage || 'en').toLowerCase().slice(0, 2);
+          target = seg2path[b] || null;
+        }
+        if (target) {
+          sessionStorage.setItem('fitence_redirected', '1');
+          location.replace('/fitence-workout/' + target + '/');
+        }
+      } catch (e) {}
+    })();
+
     function toggleLangDropdown() {
       document.getElementById('langSwitcher').classList.toggle('open');
     }

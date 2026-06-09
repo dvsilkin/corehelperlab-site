@@ -130,7 +130,8 @@ function langSwitcher(current) {
   const items = LANGS.map((l) => {
     const cls = l === current ? 'lang-btn active' : 'lang-btn';
     const label = `${flags[l]} ${l.toUpperCase()}`;
-    return `          <a class="${cls}" href="${pathFor(l)}" hreflang="${htmlLang[l]}">${label}</a>`;
+    const remember = `try{localStorage.setItem('fitence_lang','${l}')}catch(e){}`;
+    return `          <a class="${cls}" href="${pathFor(l)}" hreflang="${htmlLang[l]}" onclick="${remember}">${label}</a>`;
   }).join('\n');
   return `<div class="lang-switcher" id="langSwitcher">
         <div class="lang-selected" onclick="toggleLangDropdown()">
