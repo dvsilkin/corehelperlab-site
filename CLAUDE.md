@@ -41,21 +41,36 @@
 - Домен: corehelperlab.com (файл CNAME)
 - Деплоится автоматически из ветки `main`
 
-## Локализация (fitence-workout/index.html)
+## Локализация (статическая генерация языковых страниц)
 
 ### Поддерживаемые языки
 `en` 🇬🇧 · `ru` 🇷🇺 · `ua` 🇺🇦 · `fr` 🇫🇷 · `de` 🇩🇪 · `es` 🇪🇸 · `it` 🇮🇹
 
-### Как устроено
-- Переводы встроены в HTML как JS-объект `const translations = {...}` (~61 ключ на язык)
-- Переключалка: выпадающий список в шапке с флагами
-- Автоопределение языка браузера + сохранение в `localStorage` (`fitence_lang`)
-- При добавлении нового языка: добавить блок в `translations`, кнопку в дропдаун, флаг в `LANG_FLAGS`, ветку в `detectLang()`
+### Как устроено (важно)
+С Этапа 3 SEO лендинг **генерируется** — у каждого языка свой URL с готовым (server-rendered) HTML, чтобы поисковики его индексировали:
+- `en` (и `x-default`) → `fitence-workout/index.html`
+- остальные → `fitence-workout/<lang>/index.html` (`ru/`, `ua/`, `fr/`, `de/`, `es/`, `it/`)
+- между языками проставлены теги `hreflang`, в `sitemap.xml` — `xhtml:link` альтернативы
+
+**Источник правды — папка `_i18n/` (не публикуется: Jekyll игнорирует пути на `_`):**
+- `_i18n/translations.mjs` — все переводы (61 ключ/язык) + локализованные SEO-строки (`title`/`description`) + конфиг (флаги, hreflang-карты)
+- `_i18n/template.html` — разметка лендинга с токенами `{{...}}` и атрибутами `data-i18n`
+- `_i18n/build.mjs` — генератор
+
+**Эти сгенерированные файлы НЕЛЬЗЯ править руками** — правки затрутся при следующей сборке. Меняй `template.html` / `translations.mjs`, затем:
+```
+node _i18n/build.mjs
+```
+Команда пересоздаёт `fitence-workout/index.html`, все `fitence-workout/<lang>/index.html` и `sitemap.xml`.
+
+### Добавление нового языка
+1. Добавить код языка в `_i18n/translations.mjs`: блок в `translations`, строки в `meta`, записи в `config` (`LANGS`, `htmlLang`, `ogLocale`, `flags`).
+2. Положить локализованные скриншоты в `fitence-workout/screens/<lang>/`.
+3. Запустить `node _i18n/build.mjs` и закоммитить результат.
 
 ### Скриншоты
-- Теги: `<img data-screen="filename.jpg">` — управляются через JS
-- Логика: при смене языка JS ищет `screens/<lang>/filename.jpg`, при ошибке — фолбэк на `screens/en/filename.jpg`
-- Чтобы добавить локализованный скриншот: положить файл с тем же именем в нужную папку `screens/<lang>/`
+- В шаблоне теги вида `<img ... data-screen="filename.jpg">`; генератор проставляет `src` на `screens/<lang>/filename.jpg` для нужного языка.
+- Полный набор скриншотов лендинга должен лежать в каждой папке `screens/<lang>/` (если файла нет — положить с тем же именем).
 
 ## Связанные проекты
 - Мобильное приложение: https://github.com/dvsilkin/fitness_app
