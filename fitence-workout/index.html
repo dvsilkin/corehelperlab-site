@@ -16,6 +16,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  <!-- Preload hero LCP image -->
+  <link rel="preload" as="image" href="screens/en/active_workout_work.jpg" fetchpriority="high">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fitence">
@@ -1148,7 +1151,7 @@
   <!-- ═══ NAV ═══════════════════════════════ -->
   <header>
     <nav class="container">
-      <a href="#" class="nav-logo"><span>Fit</span>ence</a>
+      <a href="/fitence-workout/" class="nav-logo" aria-label="Fitence home"><span>Fit</span>ence</a>
       <div class="lang-switcher" id="langSwitcher">
         <div class="lang-selected" onclick="toggleLangDropdown()">
           <span id="langLabel">🇬🇧 EN</span>
@@ -1240,13 +1243,13 @@
 
         <div class="hero-screens">
           <div class="screen-mockup screen-left">
-            <img src="screens/en/active_workout_prepare.jpg" data-screen="active_workout_prepare.jpg" alt="Workouts screen">
+            <img src="screens/en/active_workout_prepare.jpg" data-screen="active_workout_prepare.jpg" alt="Fitence workout prepare screen with set countdown" width="190" height="400" decoding="async">
           </div>
           <div class="screen-mockup screen-main">
-            <img src="screens/en/active_workout_work.jpg" data-screen="active_workout_work.jpg" alt="Active workout">
+            <img src="screens/en/active_workout_work.jpg" data-screen="active_workout_work.jpg" alt="Fitence active workout screen showing the current exercise and timer" width="220" height="460" fetchpriority="high" decoding="async">
           </div>
           <div class="screen-mockup screen-right">
-            <img src="screens/en/active_workout_rest.jpg" data-screen="active_workout_rest.jpg" alt="Dashboard">
+            <img src="screens/en/active_workout_rest.jpg" data-screen="active_workout_rest.jpg" alt="Fitence rest timer between sets" width="190" height="400" decoding="async">
           </div>
         </div>
       </div>
@@ -1337,19 +1340,19 @@
     </div>
     <div class="screens-row">
       <div class="screen-card fade-in">
-        <img src="screens/en/dashboard.jpg" data-screen="dashboard.jpg" alt="Workout list">
+        <img src="screens/en/dashboard.jpg" data-screen="dashboard.jpg" alt="Fitence dashboard with today's workout and activity" width="210" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d1">
-        <img src="screens/en/workouts.jpg" data-screen="workouts.jpg" alt="Active workout">
+        <img src="screens/en/workouts.jpg" data-screen="workouts.jpg" alt="Workout list in Fitence" width="210" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d2">
-        <img src="screens/en/workout_detail.jpg" data-screen="workout_detail.jpg" alt="Workout detail">
+        <img src="screens/en/workout_detail.jpg" data-screen="workout_detail.jpg" alt="Workout detail with exercises, sets and reps" width="210" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d3">
-        <img src="screens/en/library_workouts.jpg" data-screen="library_workouts.jpg" alt="Workout complete">
+        <img src="screens/en/library_workouts.jpg" data-screen="library_workouts.jpg" alt="Workout library with ready-made programs" width="210" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d4">
-        <img src="screens/en/profile.jpg" data-screen="profile.jpg" alt="Profile">
+        <img src="screens/en/profile.jpg" data-screen="profile.jpg" alt="Profile and training statistics" width="210" height="440" loading="lazy" decoding="async">
       </div>
     </div>
     <p class="screens-caption" data-i18n="screens.caption">Swipe to see more</p>
@@ -1508,7 +1511,7 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <a href="#" class="footer-logo"><span>Fit</span>ence</a>
+        <a href="/fitence-workout/" class="footer-logo" aria-label="Fitence home"><span>Fit</span>ence</a>
         <div class="footer-links">
           <a href="index.html" data-i18n="footer.home">Home</a>
           <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
