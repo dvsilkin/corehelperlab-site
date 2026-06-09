@@ -1157,6 +1157,140 @@
     .fade-in-d5 {
       transition-delay: .5s;
     }
+
+    /* ═══════════════════════════════════════════
+   NAV LINKS (section anchors)
+═══════════════════════════════════════════ */
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--txt);
+    }
+
+    /* offset anchored sections below the sticky header */
+    #features,
+    #screens,
+    #ai,
+    #faq {
+      scroll-margin-top: 80px;
+    }
+
+    @media (max-width: 760px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+   STORE BUTTON — "SOON" STATE
+═══════════════════════════════════════════ */
+    .store-btn-soon {
+      cursor: default;
+      opacity: .55;
+    }
+
+    .store-btn-soon:hover {
+      transform: none;
+      border-color: var(--border);
+    }
+
+    .store-btn-soon:hover::before {
+      opacity: 0;
+    }
+
+    .soon-badge {
+      margin-left: 8px;
+      align-self: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--acc);
+      background: rgba(255, 77, 26, .12);
+      border: 1px solid rgba(255, 77, 26, .3);
+      padding: 2px 7px;
+      border-radius: 100px;
+    }
+
+    /* ═══════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════ */
+    .faq-section {
+      padding: 0 0 96px;
+    }
+
+    .faq-list {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 760px;
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      transition: border-color .25s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(255, 77, 26, .25);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -.2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      flex-shrink: 0;
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--acc);
+      transition: transform .25s;
+      line-height: 1;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item .faq-answer {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-weight: 300;
+    }
   </style>
 </head>
 
@@ -1166,6 +1300,11 @@
   <header>
     <nav class="container">
       <a href="/fitence-workout/" class="nav-logo" aria-label="Fitence home"><span>Fit</span>ence</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#screens" data-i18n="nav.screens">Screenshots</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
       <div class="lang-switcher" id="langSwitcher">
         <div class="lang-selected" onclick="toggleLangDropdown()">
           <span id="langLabel">🇬🇧 EN</span>
@@ -1199,8 +1338,7 @@
           <p class="hero-sub" data-i18n="hero.sub">Plan workouts, train on autopilot, get AI feedback. No internet needed.</p>
 
           <div class="store-btns">
-            <!-- 
-            <a href="https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout" class="store-btn" id="appstore-btn">
+            <span class="store-btn store-btn-soon" role="link" aria-disabled="true" aria-label="App Store — Soon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path
                   d="M20.3 14.88c-.03-3.27 2.67-4.85 2.79-4.92-1.52-2.22-3.88-2.52-4.72-2.55-2-.2-3.93 1.18-4.95 1.18-1.03 0-2.6-1.16-4.28-1.12-2.18.03-4.2 1.27-5.32 3.2-2.28 3.96-.58 9.8 1.63 13 1.08 1.57 2.36 3.32 4.04 3.26 1.63-.07 2.24-1.05 4.2-1.05 1.96 0 2.52 1.05 4.23 1.01 1.75-.03 2.85-1.58 3.91-3.15 1.24-1.8 1.75-3.56 1.77-3.65-.04-.02-3.27-1.26-3.3-5.01z"
@@ -1210,11 +1348,11 @@
                   fill="var(--txt)" />
               </svg>
               <div class="store-btn-text">
-                <small data-i18n="btn.appstore.sub">Download on the</small>
+                <small>Download on the</small>
                 <strong>App Store</strong>
               </div>
-            </a>
-            -->
+              <span class="soon-badge">Soon</span>
+            </span>
 
             <a href="https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout" class="store-btn" id="gplay-btn">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -1277,7 +1415,7 @@
       </div>
       <div class="stat-item fade-in fade-in-d1">
         <div class="stat-num">0</div>
-        <div class="stat-label" data-i18n="stat.account">Account required</div>
+        <div class="stat-label" data-i18n="stat.account">Accounts</div>
       </div>
       <div class="stat-item fade-in fade-in-d2">
         <div class="stat-num">iOS<span style="color:var(--muted);font-size:22px"> & </span>Android</div>
@@ -1292,7 +1430,7 @@
 
 
   <!-- ═══ FEATURES ══════════════════════════ -->
-  <section class="section">
+  <section class="section" id="features">
     <div class="container">
       <p class="section-eyebrow fade-in" data-i18n="feat.eyebrow">What makes Fitence different</p>
       <h2 class="section-title fade-in fade-in-d1" data-i18n="feat.title">Everything you need.<br>Nothing you don't.</h2>
@@ -1335,7 +1473,7 @@
 
 
   <!-- ═══ SCREENSHOTS ════════════════════════ -->
-  <section class="screenshots-section">
+  <section class="screenshots-section" id="screens">
     <div class="container">
       <p class="section-eyebrow fade-in" style="text-align:center" data-i18n="screens.eyebrow">See it in action</p>
       <h2 class="section-title fade-in fade-in-d1" style="text-align:center;margin-bottom:0" data-i18n="screens.title">Clean. Fast. Focused.</h2>
@@ -1362,7 +1500,7 @@
 
 
   <!-- ═══ AI SECTION ════════════════════════ -->
-  <section class="ai-section">
+  <section class="ai-section" id="ai">
     <div class="container">
       <div class="ai-inner">
         <div>
@@ -1439,29 +1577,107 @@
   </section>
 
 
+  <!-- ═══ FAQ ════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <p class="section-eyebrow fade-in" data-i18n="faq.eyebrow">Questions</p>
+      <h2 class="section-title fade-in fade-in-d1" data-i18n="faq.title">Frequently asked questions</h2>
+      <div class="faq-list fade-in fade-in-d2">
+                <details class="faq-item">
+          <summary>Is Fitence free?</summary>
+          <div class="faq-answer">Yes. Fitence is free to download — plan workouts, train on autopilot and get AI feedback with no paywall.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need an account?</summary>
+          <div class="faq-answer">No. There is no sign-up and no email required. You can export your workouts and settings to a file and restore them on any device.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it really work offline?</summary>
+          <div class="faq-answer">Yes. Every core feature works with no internet connection. Your data stays on the device and syncs automatically once you are back online.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which platforms is Fitence on?</summary>
+          <div class="faq-answer">Fitence is available on Android via Google Play. The iOS version is launching soon on the App Store.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What does the AI analysis do?</summary>
+          <div class="faq-answer">After each session Fitence reviews your performance and gives 2–3 concrete recommendations on load, technique and recovery — specific to your workout, not generic tips.</div>
+        </details>
+      </div>
+    </div>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Fitence free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fitence is free to download — plan workouts, train on autopilot and get AI feedback with no paywall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no sign-up and no email required. You can export your workouts and settings to a file and restore them on any device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it really work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every core feature works with no internet connection. Your data stays on the device and syncs automatically once you are back online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which platforms is Fitence on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fitence is available on Android via Google Play. The iOS version is launching soon on the App Store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the AI analysis do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After each session Fitence reviews your performance and gives 2–3 concrete recommendations on load, technique and recovery — specific to your workout, not generic tips."
+      }
+    }
+  ]
+}
+    </script>
+  </section>
+
+
   <!-- ═══ CTA ════════════════════════════════ -->
   <section class="cta-section">
     <div class="container">
       <h2 class="fade-in" data-i18n="cta.title">Ready to train<br>without <em>distractions?</em></h2>
       <p class="fade-in fade-in-d1" data-i18n="cta.sub">Free to download. No account needed. Start today.</p>
       <div class="cta-btns fade-in fade-in-d2">
-        
-        <!--
-        <a href="https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout" class="store-btn">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <path
-              d="M20.3 14.88c-.03-3.27 2.67-4.85 2.79-4.92-1.52-2.22-3.88-2.52-4.72-2.55-2-.2-3.93 1.18-4.95 1.18-1.03 0-2.6-1.16-4.28-1.12-2.18.03-4.2 1.27-5.32 3.2-2.28 3.96-.58 9.8 1.63 13 1.08 1.57 2.36 3.32 4.04 3.26 1.63-.07 2.24-1.05 4.2-1.05 1.96 0 2.52 1.05 4.23 1.01 1.75-.03 2.85-1.58 3.91-3.15 1.24-1.8 1.75-3.56 1.77-3.65-.04-.02-3.27-1.26-3.3-5.01z"
-              fill="var(--txt)" />
-            <path
-              d="M17.1 5.6c.89-1.09 1.5-2.59 1.33-4.1-1.29.05-2.85.86-3.77 1.93-.83.95-1.55 2.49-1.36 3.96 1.44.11 2.9-.73 3.8-1.79z"
-              fill="var(--txt)" />
-          </svg>
-          <div class="store-btn-text">
-            <small data-i18n="btn.appstore.sub">Download on the</small>
-            <strong>App Store</strong>
-          </div>
-        </a>
-        -->
+        <span class="store-btn store-btn-soon" role="link" aria-disabled="true" aria-label="App Store — Soon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path
+                  d="M20.3 14.88c-.03-3.27 2.67-4.85 2.79-4.92-1.52-2.22-3.88-2.52-4.72-2.55-2-.2-3.93 1.18-4.95 1.18-1.03 0-2.6-1.16-4.28-1.12-2.18.03-4.2 1.27-5.32 3.2-2.28 3.96-.58 9.8 1.63 13 1.08 1.57 2.36 3.32 4.04 3.26 1.63-.07 2.24-1.05 4.2-1.05 1.96 0 2.52 1.05 4.23 1.01 1.75-.03 2.85-1.58 3.91-3.15 1.24-1.8 1.75-3.56 1.77-3.65-.04-.02-3.27-1.26-3.3-5.01z"
+                  fill="var(--txt)" />
+                <path
+                  d="M17.1 5.6c.89-1.09 1.5-2.59 1.33-4.1-1.29.05-2.85.86-3.77 1.93-.83.95-1.55 2.49-1.36 3.96 1.44.11 2.9-.73 3.8-1.79z"
+                  fill="var(--txt)" />
+              </svg>
+              <div class="store-btn-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+              <span class="soon-badge">Soon</span>
+            </span>
         <a href="https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout" class="store-btn">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
             <path d="M4.5 3.1a2 2 0 00-.5 1.4v19a2 2 0 00.5 1.4l.07.07 10.64-10.64v-.25L4.57 3.03 4.5 3.1z"

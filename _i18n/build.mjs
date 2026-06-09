@@ -11,7 +11,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { config, meta, translations } from './translations.mjs';
+import { config, meta, translations, faq } from './translations.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -126,6 +126,66 @@ ${jsonLd(lang)}
   </script>`;
 }
 
+const SOON = { en: 'Soon', ru: 'Скоро', ua: 'Скоро', fr: 'Bientôt', de: 'Bald', es: 'Pronto', it: 'Presto' };
+const APPLE_SVG = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path
+                  d="M20.3 14.88c-.03-3.27 2.67-4.85 2.79-4.92-1.52-2.22-3.88-2.52-4.72-2.55-2-.2-3.93 1.18-4.95 1.18-1.03 0-2.6-1.16-4.28-1.12-2.18.03-4.2 1.27-5.32 3.2-2.28 3.96-.58 9.8 1.63 13 1.08 1.57 2.36 3.32 4.04 3.26 1.63-.07 2.24-1.05 4.2-1.05 1.96 0 2.52 1.05 4.23 1.01 1.75-.03 2.85-1.58 3.91-3.15 1.24-1.8 1.75-3.56 1.77-3.65-.04-.02-3.27-1.26-3.3-5.01z"
+                  fill="var(--txt)" />
+                <path
+                  d="M17.1 5.6c.89-1.09 1.5-2.59 1.33-4.1-1.29.05-2.85.86-3.77 1.93-.83.95-1.55 2.49-1.36 3.96 1.44.11 2.9-.73 3.8-1.79z"
+                  fill="var(--txt)" />
+              </svg>`;
+
+function appStoreButton(lang) {
+  const sub = translations[lang]['btn.appstore.sub'] || 'Download on the';
+  const a = config.appStore || {};
+  if (a.available && a.url) {
+    return `<a href="${a.url}" class="store-btn">
+              ${APPLE_SVG}
+              <div class="store-btn-text">
+                <small>${escText(sub)}</small>
+                <strong>App Store</strong>
+              </div>
+            </a>`;
+  }
+  // Not yet live (e.g. in App Store review) — non-clickable "Soon" state, no dead link
+  return `<span class="store-btn store-btn-soon" role="link" aria-disabled="true" aria-label="App Store — ${escAttr(SOON[lang])}">
+              ${APPLE_SVG}
+              <div class="store-btn-text">
+                <small>${escText(sub)}</small>
+                <strong>App Store</strong>
+              </div>
+              <span class="soon-badge">${escText(SOON[lang])}</span>
+            </span>`;
+}
+
+function faqItems(lang) {
+  return faq[lang]
+    .map(
+      ([q, a]) => `        <details class="faq-item">
+          <summary>${escText(q)}</summary>
+          <div class="faq-answer">${escText(a)}</div>
+        </details>`
+    )
+    .join('\n');
+}
+
+function faqJsonLd(lang) {
+  const obj = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: htmlLang[lang],
+    mainEntity: faq[lang].map(([q, a]) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  };
+  return `<script type="application/ld+json">
+${JSON.stringify(obj, null, 2)}
+    </script>`;
+}
+
 function langSwitcher(current) {
   const items = LANGS.map((l) => {
     const cls = l === current ? 'lang-btn active' : 'lang-btn';
@@ -165,7 +225,10 @@ function renderPage(lang) {
     .split('{{LANG}}').join(lang)
     .split('{{HOME}}').join(pathFor(lang))
     .replace('{{HEAD_SEO}}', headSeo(lang))
-    .replace('{{LANG_SWITCHER}}', langSwitcher(lang));
+    .replace('{{LANG_SWITCHER}}', langSwitcher(lang))
+    .split('{{APPSTORE_BTN}}').join(appStoreButton(lang))
+    .replace('{{FAQ}}', faqItems(lang))
+    .replace('{{FAQ_JSONLD}}', faqJsonLd(lang));
   html = bakeI18n(html, lang);
   return html;
 }

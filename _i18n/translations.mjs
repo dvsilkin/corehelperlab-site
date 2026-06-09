@@ -1,5 +1,5 @@
 // AUTO-MAINTAINED i18n source of truth for the Fitence landing.
-// Edit translations/meta here, then run:  node _i18n/build.mjs
+// Edit translations/meta/faq here, then run:  node _i18n/build.mjs
 // Outputs: fitence-workout/index.html (en, x-default) + fitence-workout/<lang>/index.html
 // This folder (_i18n) is excluded from GitHub Pages output (underscore prefix → Jekyll ignores it).
 
@@ -40,6 +40,10 @@ export const config = {
     "de": "🇩🇪",
     "es": "🇪🇸",
     "it": "🇮🇹"
+  },
+  "appStore": {
+    "url": "https://apps.apple.com/app/id6769868181",
+    "available": false
   }
 };
 
@@ -82,7 +86,7 @@ export const translations = {
     "btn.appstore.sub": "Download on the",
     "btn.gplay.sub": "Get it on",
     "stat.offline": "Works offline",
-    "stat.account": "Account required",
+    "stat.account": "Accounts",
     "stat.platforms": "Platforms",
     "stat.ai": "Post-workout analysis",
     "feat.eyebrow": "What makes Fitence different",
@@ -136,7 +140,12 @@ export const translations = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
     "footer.support": "Support",
-    "footer.tagline": "Built for focus."
+    "footer.tagline": "Built for focus.",
+    "nav.features": "Features",
+    "nav.screens": "Screenshots",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Questions",
+    "faq.title": "Frequently asked questions"
   },
   "ru": {
     "hero.label": "Приложение для тренировок iOS и Android",
@@ -145,7 +154,7 @@ export const translations = {
     "btn.appstore.sub": "Скачать в",
     "btn.gplay.sub": "Доступно в",
     "stat.offline": "Работает офлайн",
-    "stat.account": "Аккаунт нужен",
+    "stat.account": "Аккаунтов",
     "stat.platforms": "Платформы",
     "stat.ai": "AI-анализ тренировок",
     "feat.eyebrow": "Чем Fitence отличается",
@@ -199,7 +208,12 @@ export const translations = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.terms": "Условия использования",
     "footer.support": "Поддержка",
-    "footer.tagline": "Создано для фокуса."
+    "footer.tagline": "Создано для фокуса.",
+    "nav.features": "Возможности",
+    "nav.screens": "Скриншоты",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Вопросы",
+    "faq.title": "Частые вопросы"
   },
   "fr": {
     "hero.label": "Application d'entraînement pour iOS et Android",
@@ -208,7 +222,7 @@ export const translations = {
     "btn.appstore.sub": "Télécharger sur",
     "btn.gplay.sub": "Disponible sur",
     "stat.offline": "Fonctionne hors ligne",
-    "stat.account": "Compte requis",
+    "stat.account": "Comptes",
     "stat.platforms": "Plateformes",
     "stat.ai": "Analyse post-séance",
     "feat.eyebrow": "Ce qui distingue Fitence",
@@ -262,7 +276,12 @@ export const translations = {
     "footer.privacy": "Politique de confidentialité",
     "footer.terms": "Conditions d'utilisation",
     "footer.support": "Support",
-    "footer.tagline": "Conçu pour la concentration."
+    "footer.tagline": "Conçu pour la concentration.",
+    "nav.features": "Fonctions",
+    "nav.screens": "Captures",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Questions",
+    "faq.title": "Questions fréquentes"
   },
   "de": {
     "hero.label": "Trainings-App für iOS und Android",
@@ -271,7 +290,7 @@ export const translations = {
     "btn.appstore.sub": "Laden im",
     "btn.gplay.sub": "Jetzt bei",
     "stat.offline": "Offline nutzbar",
-    "stat.account": "Konto erforderlich",
+    "stat.account": "Konten",
     "stat.platforms": "Plattformen",
     "stat.ai": "KI-Analyse nach dem Training",
     "feat.eyebrow": "Was Fitence anders macht",
@@ -325,7 +344,12 @@ export const translations = {
     "footer.privacy": "Datenschutzrichtlinie",
     "footer.terms": "Nutzungsbedingungen",
     "footer.support": "Support",
-    "footer.tagline": "Für den Fokus gebaut."
+    "footer.tagline": "Für den Fokus gebaut.",
+    "nav.features": "Funktionen",
+    "nav.screens": "Screenshots",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Fragen",
+    "faq.title": "Häufige Fragen"
   },
   "es": {
     "hero.label": "App de entrenamiento para iOS y Android",
@@ -334,7 +358,7 @@ export const translations = {
     "btn.appstore.sub": "Descargar en",
     "btn.gplay.sub": "Disponible en",
     "stat.offline": "Funciona sin conexión",
-    "stat.account": "Cuenta necesaria",
+    "stat.account": "Cuentas",
     "stat.platforms": "Plataformas",
     "stat.ai": "Análisis post-entrenamiento",
     "feat.eyebrow": "Qué hace diferente a Fitence",
@@ -388,7 +412,12 @@ export const translations = {
     "footer.privacy": "Política de privacidad",
     "footer.terms": "Términos de servicio",
     "footer.support": "Soporte",
-    "footer.tagline": "Construido para el enfoque."
+    "footer.tagline": "Construido para el enfoque.",
+    "nav.features": "Funciones",
+    "nav.screens": "Capturas",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Preguntas",
+    "faq.title": "Preguntas frecuentes"
   },
   "it": {
     "hero.label": "App di allenamento per iOS e Android",
@@ -397,7 +426,7 @@ export const translations = {
     "btn.appstore.sub": "Scarica su",
     "btn.gplay.sub": "Disponibile su",
     "stat.offline": "Funziona offline",
-    "stat.account": "Account richiesto",
+    "stat.account": "Account",
     "stat.platforms": "Piattaforme",
     "stat.ai": "Analisi post-allenamento",
     "feat.eyebrow": "Cosa rende Fitence diverso",
@@ -451,7 +480,12 @@ export const translations = {
     "footer.privacy": "Informativa sulla privacy",
     "footer.terms": "Termini di servizio",
     "footer.support": "Supporto",
-    "footer.tagline": "Costruito per la concentrazione."
+    "footer.tagline": "Costruito per la concentrazione.",
+    "nav.features": "Funzioni",
+    "nav.screens": "Screenshot",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Domande",
+    "faq.title": "Domande frequenti"
   },
   "ua": {
     "hero.label": "Застосунок для тренувань iOS і Android",
@@ -460,7 +494,7 @@ export const translations = {
     "btn.appstore.sub": "Завантажити в",
     "btn.gplay.sub": "Доступно в",
     "stat.offline": "Працює офлайн",
-    "stat.account": "Обліковий запис потрібен",
+    "stat.account": "Акаунтів",
     "stat.platforms": "Платформи",
     "stat.ai": "AI-аналіз тренувань",
     "feat.eyebrow": "Чим Fitence відрізняється",
@@ -514,6 +548,168 @@ export const translations = {
     "footer.privacy": "Політика конфіденційності",
     "footer.terms": "Умови використання",
     "footer.support": "Підтримка",
-    "footer.tagline": "Створено для фокусу."
+    "footer.tagline": "Створено для фокусу.",
+    "nav.features": "Можливості",
+    "nav.screens": "Скриншоти",
+    "nav.faq": "FAQ",
+    "faq.eyebrow": "Питання",
+    "faq.title": "Часті запитання"
   }
+};
+
+export const faq = {
+  "en": [
+    [
+      "Is Fitence free?",
+      "Yes. Fitence is free to download — plan workouts, train on autopilot and get AI feedback with no paywall."
+    ],
+    [
+      "Do I need an account?",
+      "No. There is no sign-up and no email required. You can export your workouts and settings to a file and restore them on any device."
+    ],
+    [
+      "Does it really work offline?",
+      "Yes. Every core feature works with no internet connection. Your data stays on the device and syncs automatically once you are back online."
+    ],
+    [
+      "Which platforms is Fitence on?",
+      "Fitence is available on Android via Google Play. The iOS version is launching soon on the App Store."
+    ],
+    [
+      "What does the AI analysis do?",
+      "After each session Fitence reviews your performance and gives 2–3 concrete recommendations on load, technique and recovery — specific to your workout, not generic tips."
+    ]
+  ],
+  "ru": [
+    [
+      "Fitence бесплатный?",
+      "Да. Fitence бесплатен для скачивания — планируйте тренировки, работайте на автопилоте и получайте AI-разбор без платных стен."
+    ],
+    [
+      "Нужен ли аккаунт?",
+      "Нет. Никакой регистрации и email. Тренировки и настройки можно экспортировать в файл и восстановить на любом устройстве."
+    ],
+    [
+      "Действительно работает офлайн?",
+      "Да. Все основные функции работают без интернета. Данные хранятся на устройстве и синхронизируются автоматически, когда появится связь."
+    ],
+    [
+      "На каких платформах доступен Fitence?",
+      "Fitence доступен на Android в Google Play. Версия для iOS скоро выходит в App Store."
+    ],
+    [
+      "Что делает AI-анализ?",
+      "После каждой тренировки Fitence разбирает результаты и даёт 2–3 конкретные рекомендации по нагрузке, технике и восстановлению — под вашу тренировку, а не общие советы."
+    ]
+  ],
+  "ua": [
+    [
+      "Fitence безкоштовний?",
+      "Так. Fitence безкоштовний для завантаження — плануйте тренування, працюйте на автопілоті й отримуйте AI-аналіз без платних обмежень."
+    ],
+    [
+      "Чи потрібен обліковий запис?",
+      "Ні. Жодної реєстрації та email. Тренування й налаштування можна експортувати у файл і відновити на будь-якому пристрої."
+    ],
+    [
+      "Справді працює офлайн?",
+      "Так. Усі основні функції працюють без інтернету. Дані зберігаються на пристрої та синхронізуються автоматично, коли зʼявиться звʼязок."
+    ],
+    [
+      "На яких платформах доступний Fitence?",
+      "Fitence доступний на Android у Google Play. Версія для iOS незабаром виходить в App Store."
+    ],
+    [
+      "Що робить AI-аналіз?",
+      "Після кожного тренування Fitence аналізує результати й дає 2–3 конкретні рекомендації щодо навантаження, техніки та відновлення — саме під ваше тренування."
+    ]
+  ],
+  "fr": [
+    [
+      "Fitence est-il gratuit ?",
+      "Oui. Fitence est gratuit à télécharger — planifiez vos séances, entraînez-vous en mode automatique et obtenez un retour IA, sans paywall."
+    ],
+    [
+      "Faut-il un compte ?",
+      "Non. Aucune inscription ni e-mail. Vous pouvez exporter vos séances et réglages dans un fichier et les restaurer sur n'importe quel appareil."
+    ],
+    [
+      "Fonctionne-t-il vraiment hors ligne ?",
+      "Oui. Toutes les fonctions essentielles marchent sans connexion. Vos données restent sur l'appareil et se synchronisent dès le retour en ligne."
+    ],
+    [
+      "Sur quelles plateformes est Fitence ?",
+      "Fitence est disponible sur Android via Google Play. La version iOS arrive bientôt sur l'App Store."
+    ],
+    [
+      "Que fait l'analyse IA ?",
+      "Après chaque séance, Fitence analyse vos performances et donne 2–3 recommandations concrètes sur la charge, la technique et la récupération — adaptées à votre séance."
+    ]
+  ],
+  "de": [
+    [
+      "Ist Fitence kostenlos?",
+      "Ja. Fitence ist kostenlos — Trainings planen, auf Autopilot trainieren und KI-Feedback erhalten, ganz ohne Paywall."
+    ],
+    [
+      "Brauche ich ein Konto?",
+      "Nein. Keine Registrierung, keine E-Mail. Du kannst Trainings und Einstellungen in eine Datei exportieren und auf jedem Gerät wiederherstellen."
+    ],
+    [
+      "Funktioniert es wirklich offline?",
+      "Ja. Alle Kernfunktionen laufen ohne Internet. Deine Daten bleiben auf dem Gerät und synchronisieren sich automatisch, sobald du wieder online bist."
+    ],
+    [
+      "Auf welchen Plattformen gibt es Fitence?",
+      "Fitence ist auf Android über Google Play verfügbar. Die iOS-Version erscheint bald im App Store."
+    ],
+    [
+      "Was macht die KI-Analyse?",
+      "Nach jeder Einheit wertet Fitence deine Leistung aus und gibt 2–3 konkrete Empfehlungen zu Belastung, Technik und Erholung – passend zu deinem Training."
+    ]
+  ],
+  "es": [
+    [
+      "¿Fitence es gratis?",
+      "Sí. Fitence es gratis para descargar — planifica entrenamientos, entrena en piloto automático y recibe feedback de IA, sin muros de pago."
+    ],
+    [
+      "¿Necesito una cuenta?",
+      "No. Sin registro ni correo. Puedes exportar tus entrenamientos y ajustes a un archivo y restaurarlos en cualquier dispositivo."
+    ],
+    [
+      "¿Funciona de verdad sin conexión?",
+      "Sí. Todas las funciones esenciales funcionan sin internet. Tus datos se quedan en el dispositivo y se sincronizan al volver a estar en línea."
+    ],
+    [
+      "¿En qué plataformas está Fitence?",
+      "Fitence está disponible en Android a través de Google Play. La versión para iOS llegará pronto a la App Store."
+    ],
+    [
+      "¿Qué hace el análisis con IA?",
+      "Tras cada sesión, Fitence revisa tu rendimiento y da 2–3 recomendaciones concretas sobre carga, técnica y recuperación — específicas para tu entrenamiento."
+    ]
+  ],
+  "it": [
+    [
+      "Fitence è gratis?",
+      "Sì. Fitence è gratis da scaricare — pianifica gli allenamenti, allenati in automatico e ricevi feedback IA, senza paywall."
+    ],
+    [
+      "Serve un account?",
+      "No. Nessuna registrazione né email. Puoi esportare allenamenti e impostazioni in un file e ripristinarli su qualsiasi dispositivo."
+    ],
+    [
+      "Funziona davvero offline?",
+      "Sì. Tutte le funzioni principali funzionano senza internet. I tuoi dati restano sul dispositivo e si sincronizzano appena torni online."
+    ],
+    [
+      "Su quali piattaforme è Fitence?",
+      "Fitence è disponibile su Android tramite Google Play. La versione iOS arriverà presto sull'App Store."
+    ],
+    [
+      "Cosa fa l'analisi IA?",
+      "Dopo ogni sessione Fitence analizza la tua performance e dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento."
+    ]
+  ]
 };

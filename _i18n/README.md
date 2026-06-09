@@ -24,6 +24,16 @@ Generates:
   here and re-run the build.
 - Each language needs its screenshots in `fitence-workout/screens/<lang>/`.
 
+## Enable the App Store button (iOS launch)
+
+The App Store button is config-gated in `translations.mjs`:
+```js
+config.appStore = { url: 'https://apps.apple.com/app/id6769868181', available: false };
+```
+While `available: false` it renders as a non-clickable **"Soon"** badge on every
+language. When the iOS app is **Ready for Sale**, set `available: true`, run the
+build, and the live App Store button appears on all 7 pages at once.
+
 ## Add a language
 1. Add the language to `translations.mjs` (`translations`, `meta`, and `config`:
    `LANGS`, `htmlLang`, `ogLocale`, `flags`).
