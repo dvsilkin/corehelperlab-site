@@ -165,7 +165,7 @@
     <header>
         <a href="index.html">← Fitence: Workout Planner</a>
         <h1>Privacy Policy</h1>
-        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Effective date: May 6, 2026</p>
+        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Effective date: June 16, 2026</p>
     </header>
 
     <main>
@@ -208,8 +208,9 @@
             </ul>
             <p>This data is used solely to provide App functionality and is
                 <strong>never sold or shared with third parties for advertising purposes</strong>.
-                For AI-powered workout analysis, anonymized workout data is processed via a
-                Firebase Cloud Function and is not retained after analysis is complete.
+                If you choose to use the optional AI-powered workout analysis, the relevant
+                workout and profile data described in Section 4.5 is shared with our AI provider
+                (Anthropic) only after you give explicit in-app consent. See Section 4.5 for details.
             </p>
         </div>
 
@@ -227,7 +228,8 @@
                 <li><strong>Authentication Data:</strong> We receive your display name, email address, and provider identifier when you
                     sign in via Google or Apple.</li>
                 <li><strong>Health & Fitness Data:</strong> We process your workout history, exercise data, and body metrics such as
-                    weight, height, and date of birth.</li>
+                    weight, height, and date of birth. With your explicit in-app consent, a subset of this data is shared with our
+                    AI provider (Anthropic) to generate workout analysis — see Section 4.5.</li>
                 <li><strong>App Activity:</strong> We track in-app events and feature usage via Firebase Analytics and Mixpanel to improve our
                     services. A pseudonymous device identifier (Firebase App Instance ID) is used — no name, email, or other personal data is associated with analytics.</li>
                 <li><strong>App Info & Performance:</strong> We collect crash logs and diagnostic data through Firebase Crashlytics to
@@ -262,7 +264,7 @@
             <ul>
                 <li><strong>Contract performance</strong> — to provide App functionality;</li>
                 <li><strong>Legitimate interests</strong> — analytics, improvement, stability;</li>
-                <li><strong>User consent</strong> — where required (e.g., personalized ads).</li>
+                <li><strong>User consent</strong> — where required (e.g., personalized ads; sharing workout and profile data with our AI provider for AI analysis).</li>
             </ul>
         </div>
 
@@ -311,6 +313,31 @@
             </p>
             <p>Mixpanel Privacy Policy: <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank"
                     rel="noopener">mixpanel.com/legal/privacy-policy</a></p>
+
+            <h3>4.5 Anthropic (AI Workout Analysis)</h3>
+            <p>The App offers an optional AI-powered analysis of your completed workouts. This feature is
+                provided using the AI models of <strong>Anthropic, PBC</strong> ("Anthropic"). The request is
+                routed through our secure Firebase Cloud Function (which holds the API credentials) to the
+                Anthropic API.</p>
+            <p><strong>This feature is strictly opt-in.</strong> No data is sent to Anthropic until you tap to
+                request an analysis and grant explicit consent on the in-app disclosure screen shown before the
+                first request.</p>
+            <p>When you request an analysis, the following data is sent for that single request:</p>
+            <ul>
+                <li><strong>Profile data:</strong> sex, age, height, weight, calculated BMI, and training goal;</li>
+                <li><strong>Workout data:</strong> workout name, date, planned and actual duration, and per-exercise
+                    details (sets, repetitions, weights, durations, and volumes).</li>
+            </ul>
+            <p>We do <strong>not</strong> send your name, email address, account identifier, precise location, or any
+                payment information to Anthropic.</p>
+            <p>The data is used <strong>only</strong> to generate your workout analysis. Under Anthropic's commercial
+                terms, your inputs and outputs are <strong>not used to train Anthropic's models</strong> and are not
+                used for advertising. Anthropic processes the data as our service provider and provides a level of
+                data protection equivalent to that described in this Policy, including contractual data-protection
+                commitments and Standard Contractual Clauses for international transfers (see Section 8).</p>
+            <p>You can decline at the consent screen; declining means no data is shared and the AI analysis is not
+                generated. Anthropic Privacy Policy:
+                <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a></p>
         </div>
 
         <!-- 5 -->
@@ -379,7 +406,7 @@
                 <li>HTTPS/TLS encryption;</li>
                 <li>access control;</li>
                 <li>Firebase Security Rules;</li>
-                <li>international data transfers (to Firebase / RevenueCat servers located in the United States, and Mixpanel servers located in the European Union) carried
+                <li>international data transfers (to Firebase / RevenueCat servers and the Anthropic API located in the United States, and Mixpanel servers located in the European Union) carried
                     out under Standard Contractual Clauses (SCC) as approved by the European Commission.</li>
             </ul>
         </div>
