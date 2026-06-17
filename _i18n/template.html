@@ -470,6 +470,7 @@
       text-align: center;
       padding: 0 16px;
       position: relative;
+      min-width: 0;
     }
 
     .stat-item:not(:last-child)::after {
@@ -994,8 +995,12 @@
       }
 
       .stats-bar .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
+      }
+
+      .stat-num {
+        font-size: 26px;
       }
 
       .stat-item:nth-child(2)::after {
@@ -1035,7 +1040,7 @@
       }
 
       .stats-bar .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
