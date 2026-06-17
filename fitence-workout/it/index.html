@@ -705,6 +705,11 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
+      /* Без scroll-padding снап примагничивает левый край первой карточки
+         к краю скроллпорта и визуально «съедает» padding-left на позиции 0.
+         Совмещаем точку снапа с горизонтальным отступом, чтобы слева был
+         такой же отступ, как справа. */
+      scroll-padding-inline: max(24px, calc((100vw - 1130px) / 2));
     }
 
     .screens-row::-webkit-scrollbar {
