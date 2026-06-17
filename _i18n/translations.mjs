@@ -42,8 +42,8 @@ export const config = {
     "it": "🇮🇹"
   },
   "appStore": {
-    "url": "https://apps.apple.com/app/id6769868181",
-    "available": false
+    "url": "https://apps.apple.com/us/app/fitence-workout-planner-log/id6769868181",
+    "available": true
   }
 };
 
@@ -573,7 +573,7 @@ export const faq = {
     ],
     [
       "Which platforms is Fitence on?",
-      "Fitence is available on Android via Google Play. The iOS version is launching soon on the App Store."
+      "Fitence is available on Android via Google Play and on iOS via the App Store."
     ],
     [
       "What does the AI analysis do?",
@@ -595,7 +595,7 @@ export const faq = {
     ],
     [
       "На каких платформах доступен Fitence?",
-      "Fitence доступен на Android в Google Play. Версия для iOS скоро выходит в App Store."
+      "Fitence доступен на Android в Google Play и на iOS в App Store."
     ],
     [
       "Что делает AI-анализ?",
@@ -617,7 +617,7 @@ export const faq = {
     ],
     [
       "На яких платформах доступний Fitence?",
-      "Fitence доступний на Android у Google Play. Версія для iOS незабаром виходить в App Store."
+      "Fitence доступний на Android у Google Play та на iOS в App Store."
     ],
     [
       "Що робить AI-аналіз?",
@@ -639,7 +639,7 @@ export const faq = {
     ],
     [
       "Sur quelles plateformes est Fitence ?",
-      "Fitence est disponible sur Android via Google Play. La version iOS arrive bientôt sur l'App Store."
+      "Fitence est disponible sur Android via Google Play et sur iOS via l'App Store."
     ],
     [
       "Que fait l'analyse IA ?",
@@ -661,7 +661,7 @@ export const faq = {
     ],
     [
       "Auf welchen Plattformen gibt es Fitence?",
-      "Fitence ist auf Android über Google Play verfügbar. Die iOS-Version erscheint bald im App Store."
+      "Fitence ist auf Android über Google Play und auf iOS im App Store verfügbar."
     ],
     [
       "Was macht die KI-Analyse?",
@@ -683,7 +683,7 @@ export const faq = {
     ],
     [
       "¿En qué plataformas está Fitence?",
-      "Fitence está disponible en Android a través de Google Play. La versión para iOS llegará pronto a la App Store."
+      "Fitence está disponible en Android a través de Google Play y en iOS a través de la App Store."
     ],
     [
       "¿Qué hace el análisis con IA?",
@@ -705,7 +705,7 @@ export const faq = {
     ],
     [
       "Su quali piattaforme è Fitence?",
-      "Fitence è disponibile su Android tramite Google Play. La versione iOS arriverà presto sull'App Store."
+      "Fitence è disponibile su Android tramite Google Play e su iOS tramite l'App Store."
     ],
     [
       "Cosa fa l'analisi IA?",
