@@ -44,37 +44,50 @@ export const config = {
   "appStore": {
     "url": "https://apps.apple.com/us/app/fitence-workout-planner-log/id6769868181",
     "available": true
+  },
+  "i18nSameAsEnglish": {
+    "fr": [
+      "faq.eyebrow",
+      "footer.support"
+    ],
+    "de": [
+      "nav.screens",
+      "footer.support"
+    ],
+    "it": [
+      "footer.home"
+    ]
   }
 };
 
 export const meta = {
   "en": {
-    "title": "Fitence — Offline Gym & HIIT Workout Tracker for iOS & Android",
-    "desc": "Fitence is an offline-first workout tracker for strength & HIIT. Plan workouts, train on autopilot with audio cues, and get AI feedback after every session. No account, no internet needed. Free on iOS & Android."
+    "title": "Fitence — Offline Gym & HIIT Workout Tracker App",
+    "desc": "Offline-first workout tracker for strength & HIIT. Plan sessions, train on autopilot with audio cues, get AI feedback. Free on iOS & Android."
   },
   "ru": {
-    "title": "Fitence — офлайн-трекер тренировок для зала и HIIT (iOS, Android)",
-    "desc": "Fitence — офлайн-трекер силовых и HIIT-тренировок. Планируй тренировки, тренируйся на автопилоте со звуковыми сигналами и получай AI-разбор после каждой сессии. Без аккаунта и интернета. Бесплатно для iOS и Android."
+    "title": "Fitence — офлайн-трекер тренировок для зала и HIIT",
+    "desc": "Офлайн-трекер силовых и HIIT-тренировок. Планируй, тренируйся на автопилоте со звуковыми сигналами, получай AI-разбор. Бесплатно на iOS и Android."
   },
   "ua": {
-    "title": "Fitence — офлайн-трекер тренувань для залу та HIIT (iOS, Android)",
-    "desc": "Fitence — офлайн-трекер силових та HIIT-тренувань. Плануй тренування, тренуйся на автопілоті зі звуковими сигналами та отримуй AI-аналіз після кожної сесії. Без облікового запису та інтернету. Безкоштовно для iOS та Android."
+    "title": "Fitence — офлайн-трекер тренувань для залу та HIIT",
+    "desc": "Офлайн-трекер силових та HIIT-тренувань. Плануй, тренуйся на автопілоті зі звуковими сигналами, отримуй AI-аналіз. Безкоштовно на iOS і Android."
   },
   "fr": {
-    "title": "Fitence — Suivi d'entraînement gym & HIIT hors ligne (iOS, Android)",
-    "desc": "Fitence est un tracker d'entraînement hors ligne pour la force et le HIIT. Planifiez, entraînez-vous en mode automatique avec signaux audio et recevez un retour IA après chaque séance. Sans compte ni internet. Gratuit sur iOS et Android."
+    "title": "Fitence — Suivi d'entraînement gym & HIIT hors ligne",
+    "desc": "Tracker d'entraînement hors ligne pour la force et le HIIT. Planifiez, entraînez-vous en mode auto, retour IA. Gratuit sur iOS et Android."
   },
   "de": {
-    "title": "Fitence — Offline Gym- & HIIT-Trainings-Tracker (iOS, Android)",
-    "desc": "Fitence ist ein Offline-Trainings-Tracker für Kraft und HIIT. Trainings planen, auf Autopilot mit Audiosignalen trainieren und nach jeder Einheit KI-Feedback erhalten. Kein Konto, kein Internet nötig. Kostenlos für iOS und Android."
+    "title": "Fitence — Offline Gym- & HIIT-Trainings-Tracker",
+    "desc": "Offline-Trainings-Tracker für Kraft und HIIT. Trainings planen, mit Audiosignalen auf Autopilot trainieren, KI-Feedback. Gratis für iOS und Android."
   },
   "es": {
-    "title": "Fitence — Registro de entrenos de gimnasio y HIIT sin conexión",
-    "desc": "Fitence es un tracker de entrenamientos sin conexión para fuerza y HIIT. Planifica, entrena en piloto automático con señales de audio y recibe feedback de IA tras cada sesión. Sin cuenta ni internet. Gratis en iOS y Android."
+    "title": "Fitence — Registro de entrenos de gimnasio y HIIT",
+    "desc": "Tracker de entrenamientos sin conexión para fuerza y HIIT. Planifica, entrena en piloto automático y recibe feedback de IA. Gratis en iOS y Android."
   },
   "it": {
-    "title": "Fitence — Tracker allenamenti palestra e HIIT offline (iOS, Android)",
-    "desc": "Fitence è un tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio e ricevi feedback IA dopo ogni sessione. Senza account né internet. Gratis su iOS e Android."
+    "title": "Fitence — Tracker allenamenti palestra e HIIT",
+    "desc": "Tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio, feedback IA. Gratis su iOS e Android."
   }
 };
 
@@ -104,18 +117,9 @@ export const translations = {
     "f5.body": "Start immediately. Export workouts to a file, restore on any device at any time.",
     "f6.title": "Built for the gym",
     "f6.body": "High-contrast typography, large tap targets. Every number readable mid-set.",
-    "ph.workouts": "Workouts screen",
-    "ph.active": "Active workout",
-    "ph.dashboard": "Dashboard",
     "screens.eyebrow": "See it in action",
     "screens.title": "Clean. Fast. Focused.",
     "screens.caption": "Swipe to see more",
-    "scr1": "Workouts",
-    "scr2": "Active workout",
-    "scr3": "Workout detail",
-    "scr4": "Workout complete",
-    "scr5": "Profile & stats",
-    "scr.ph": "Replace with screenshot",
     "ai.badge": "AI-powered",
     "ai.title": "Your personal<br>performance<br><em style=\"color:var(--acc2)\">coach</em>",
     "ai.sub": "After every session, Fitence delivers 2–3 specific, actionable recommendations — not generic advice.",
@@ -145,7 +149,17 @@ export const translations = {
     "nav.screens": "Screenshots",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Questions",
-    "faq.title": "Frequently asked questions"
+    "faq.title": "Frequently asked questions",
+    "alt.prepare": "Fitence workout prepare screen with set countdown",
+    "alt.work": "Fitence active workout screen showing the current exercise and timer",
+    "alt.rest": "Fitence rest timer between sets",
+    "alt.dashboard": "Fitence dashboard with today's workout and activity",
+    "alt.workouts": "Workout list in Fitence",
+    "alt.detail": "Workout detail with exercises, sets and reps",
+    "alt.library": "Workout library with ready-made programs in Fitence",
+    "alt.profile": "Profile and training statistics in Fitence",
+    "og.imageAlt": "Fitence — offline gym & HIIT workout tracker for iOS and Android",
+    "tw.imageAlt": "Fitence workout tracker"
   },
   "ru": {
     "hero.label": "Приложение для тренировок iOS и Android",
@@ -172,18 +186,9 @@ export const translations = {
     "f5.body": "Начни сразу. Экспортируй тренировки в файл, восстанови на любом устройстве в любое время.",
     "f6.title": "Создан для зала",
     "f6.body": "Контрастная типографика, крупные элементы. Каждая цифра читается в середине подхода.",
-    "ph.workouts": "Список тренировок",
-    "ph.active": "Активная тренировка",
-    "ph.dashboard": "Дашборд",
     "screens.eyebrow": "Посмотри в деле",
     "screens.title": "Чисто. Быстро. В фокусе.",
     "screens.caption": "Листай чтобы увидеть больше",
-    "scr1": "Тренировки",
-    "scr2": "Активная тренировка",
-    "scr3": "Детали тренировки",
-    "scr4": "Тренировка завершена",
-    "scr5": "Профиль и статистика",
-    "scr.ph": "Замените скриншотом",
     "ai.badge": "AI-анализ",
     "ai.title": "Твой персональный<br>тренер по<br><em style=\"color:var(--acc2)\">результатам</em>",
     "ai.sub": "После каждой сессии Fitence даёт 2–3 конкретные, применимые рекомендации — не общие советы.",
@@ -213,7 +218,17 @@ export const translations = {
     "nav.screens": "Скриншоты",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Вопросы",
-    "faq.title": "Частые вопросы"
+    "faq.title": "Частые вопросы",
+    "alt.prepare": "Экран подготовки к подходу в Fitence с обратным отсчётом",
+    "alt.work": "Экран активной тренировки Fitence: текущее упражнение и таймер",
+    "alt.rest": "Таймер отдыха между подходами в Fitence",
+    "alt.dashboard": "Главный экран Fitence с тренировкой на сегодня и активностью",
+    "alt.workouts": "Список тренировок в Fitence",
+    "alt.detail": "Детали тренировки: упражнения, подходы и повторения",
+    "alt.library": "Библиотека готовых программ тренировок в Fitence",
+    "alt.profile": "Профиль и статистика тренировок в Fitence",
+    "og.imageAlt": "Fitence — офлайн-трекер тренировок для зала и HIIT на iOS и Android",
+    "tw.imageAlt": "Трекер тренировок Fitence"
   },
   "fr": {
     "hero.label": "Application d'entraînement pour iOS et Android",
@@ -240,18 +255,9 @@ export const translations = {
     "f5.body": "Commencez immédiatement. Exportez les séances dans un fichier, restaurez sur n'importe quel appareil.",
     "f6.title": "Fait pour la salle",
     "f6.body": "Typographie à fort contraste, grandes zones tactiles. Chaque chiffre lisible en plein effort.",
-    "ph.workouts": "Écran des séances",
-    "ph.active": "Séance en cours",
-    "ph.dashboard": "Tableau de bord",
     "screens.eyebrow": "Voir en action",
     "screens.title": "Clair. Rapide. Focalisé.",
     "screens.caption": "Faites défiler pour voir plus",
-    "scr1": "Séances",
-    "scr2": "Séance en cours",
-    "scr3": "Détail de séance",
-    "scr4": "Séance terminée",
-    "scr5": "Profil et stats",
-    "scr.ph": "Remplacer par une capture",
     "ai.badge": "Propulsé par l'IA",
     "ai.title": "Votre coach<br>personnel de<br><em style=\"color:var(--acc2)\">performance</em>",
     "ai.sub": "Après chaque séance, Fitence fournit 2–3 recommandations spécifiques et actionnables — pas de conseils génériques.",
@@ -281,7 +287,17 @@ export const translations = {
     "nav.screens": "Captures",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Questions",
-    "faq.title": "Questions fréquentes"
+    "faq.title": "Questions fréquentes",
+    "alt.prepare": "Écran de préparation de série dans Fitence avec compte à rebours",
+    "alt.work": "Écran d'entraînement actif Fitence : exercice en cours et minuteur",
+    "alt.rest": "Minuteur de récupération entre les séries dans Fitence",
+    "alt.dashboard": "Tableau de bord Fitence avec la séance du jour et l'activité",
+    "alt.workouts": "Liste des séances d'entraînement dans Fitence",
+    "alt.detail": "Détail d'une séance : exercices, séries et répétitions",
+    "alt.library": "Bibliothèque de programmes d'entraînement prêts à l'emploi",
+    "alt.profile": "Profil et statistiques d'entraînement dans Fitence",
+    "og.imageAlt": "Fitence — suivi d'entraînement gym et HIIT hors ligne pour iOS et Android",
+    "tw.imageAlt": "Tracker d'entraînement Fitence"
   },
   "de": {
     "hero.label": "Trainings-App für iOS und Android",
@@ -308,18 +324,9 @@ export const translations = {
     "f5.body": "Sofort loslegen. Trainings in eine Datei exportieren, auf jedem Gerät wiederherstellen.",
     "f6.title": "Fürs Fitnessstudio gebaut",
     "f6.body": "Kontrastreiche Typografie, große Tippziele. Jede Zahl mitten im Satz lesbar.",
-    "ph.workouts": "Trainingsübersicht",
-    "ph.active": "Aktives Training",
-    "ph.dashboard": "Dashboard",
     "screens.eyebrow": "In Aktion sehen",
     "screens.title": "Klar. Schnell. Fokussiert.",
     "screens.caption": "Wischen für mehr",
-    "scr1": "Trainings",
-    "scr2": "Aktives Training",
-    "scr3": "Trainingsdetail",
-    "scr4": "Training abgeschlossen",
-    "scr5": "Profil & Statistiken",
-    "scr.ph": "Durch Screenshot ersetzen",
     "ai.badge": "KI-gestützt",
     "ai.title": "Dein persönlicher<br>Performance-<br><em style=\"color:var(--acc2)\">Coach</em>",
     "ai.sub": "Nach jeder Einheit liefert Fitence 2–3 spezifische, umsetzbare Empfehlungen — keine Allgemeinplätze.",
@@ -349,7 +356,17 @@ export const translations = {
     "nav.screens": "Screenshots",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Fragen",
-    "faq.title": "Häufige Fragen"
+    "faq.title": "Häufige Fragen",
+    "alt.prepare": "Satz-Vorbereitungsbildschirm in Fitence mit Countdown",
+    "alt.work": "Aktives Training in Fitence: aktuelle Übung und Timer",
+    "alt.rest": "Pausen-Timer zwischen den Sätzen in Fitence",
+    "alt.dashboard": "Fitence Dashboard mit dem heutigen Training und der Aktivität",
+    "alt.workouts": "Trainingsliste in Fitence",
+    "alt.detail": "Trainingsdetails mit Übungen, Sätzen und Wiederholungen",
+    "alt.library": "Trainingsbibliothek mit fertigen Programmen in Fitence",
+    "alt.profile": "Profil und Trainingsstatistiken in Fitence",
+    "og.imageAlt": "Fitence — Offline-Tracker für Gym- und HIIT-Training auf iOS und Android",
+    "tw.imageAlt": "Fitence Trainings-Tracker"
   },
   "es": {
     "hero.label": "App de entrenamiento para iOS y Android",
@@ -376,18 +393,9 @@ export const translations = {
     "f5.body": "Empieza de inmediato. Exporta entrenamientos a un archivo, restáuralos en cualquier dispositivo.",
     "f6.title": "Hecho para el gimnasio",
     "f6.body": "Tipografía de alto contraste, objetivos táctiles grandes. Cada número legible a mitad de serie.",
-    "ph.workouts": "Pantalla de entrenamientos",
-    "ph.active": "Entrenamiento activo",
-    "ph.dashboard": "Panel de control",
     "screens.eyebrow": "Véalo en acción",
     "screens.title": "Limpio. Rápido. Enfocado.",
     "screens.caption": "Desliza para ver más",
-    "scr1": "Entrenamientos",
-    "scr2": "Entrenamiento activo",
-    "scr3": "Detalle del entrenamiento",
-    "scr4": "Entrenamiento completo",
-    "scr5": "Perfil y estadísticas",
-    "scr.ph": "Reemplazar con captura",
     "ai.badge": "Impulsado por IA",
     "ai.title": "Tu entrenador<br>personal de<br><em style=\"color:var(--acc2)\">rendimiento</em>",
     "ai.sub": "Después de cada sesión, Fitence entrega 2–3 recomendaciones específicas y accionables — no consejos genéricos.",
@@ -417,7 +425,17 @@ export const translations = {
     "nav.screens": "Capturas",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Preguntas",
-    "faq.title": "Preguntas frecuentes"
+    "faq.title": "Preguntas frecuentes",
+    "alt.prepare": "Pantalla de preparación de serie en Fitence con cuenta atrás",
+    "alt.work": "Pantalla de entrenamiento activo en Fitence: ejercicio actual y temporizador",
+    "alt.rest": "Temporizador de descanso entre series en Fitence",
+    "alt.dashboard": "Panel de Fitence con el entrenamiento de hoy y la actividad",
+    "alt.workouts": "Lista de entrenamientos en Fitence",
+    "alt.detail": "Detalle del entrenamiento con ejercicios, series y repeticiones",
+    "alt.library": "Biblioteca de programas de entrenamiento listos en Fitence",
+    "alt.profile": "Perfil y estadísticas de entrenamiento en Fitence",
+    "og.imageAlt": "Fitence — registro de entrenos de gimnasio y HIIT sin conexión para iOS y Android",
+    "tw.imageAlt": "Tracker de entrenamientos Fitence"
   },
   "it": {
     "hero.label": "App di allenamento per iOS e Android",
@@ -444,18 +462,9 @@ export const translations = {
     "f5.body": "Inizia subito. Esporta gli allenamenti in un file, ripristina su qualsiasi dispositivo.",
     "f6.title": "Fatto per la palestra",
     "f6.body": "Tipografia ad alto contrasto, grandi aree di tocco. Ogni numero leggibile a metà serie.",
-    "ph.workouts": "Schermata allenamenti",
-    "ph.active": "Allenamento attivo",
-    "ph.dashboard": "Dashboard",
     "screens.eyebrow": "Guarda in azione",
     "screens.title": "Pulito. Veloce. Focalizzato.",
     "screens.caption": "Scorri per vedere di più",
-    "scr1": "Allenamenti",
-    "scr2": "Allenamento attivo",
-    "scr3": "Dettaglio allenamento",
-    "scr4": "Allenamento completato",
-    "scr5": "Profilo e statistiche",
-    "scr.ph": "Sostituire con screenshot",
     "ai.badge": "Basato sull'IA",
     "ai.title": "Il tuo coach<br>personale di<br><em style=\"color:var(--acc2)\">performance</em>",
     "ai.sub": "Dopo ogni sessione, Fitence fornisce 2–3 raccomandazioni specifiche e praticabili — non consigli generici.",
@@ -485,7 +494,17 @@ export const translations = {
     "nav.screens": "Screenshot",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Domande",
-    "faq.title": "Domande frequenti"
+    "faq.title": "Domande frequenti",
+    "alt.prepare": "Schermata di preparazione della serie in Fitence con conto alla rovescia",
+    "alt.work": "Schermata di allenamento attivo in Fitence: esercizio corrente e timer",
+    "alt.rest": "Timer di recupero tra le serie in Fitence",
+    "alt.dashboard": "Dashboard di Fitence con l'allenamento di oggi e l'attività",
+    "alt.workouts": "Elenco degli allenamenti in Fitence",
+    "alt.detail": "Dettaglio dell'allenamento con esercizi, serie e ripetizioni",
+    "alt.library": "Libreria di programmi di allenamento pronti in Fitence",
+    "alt.profile": "Profilo e statistiche di allenamento in Fitence",
+    "og.imageAlt": "Fitence — tracker offline per allenamenti in palestra e HIIT su iOS e Android",
+    "tw.imageAlt": "Tracker allenamenti Fitence"
   },
   "ua": {
     "hero.label": "Застосунок для тренувань iOS і Android",
@@ -512,18 +531,9 @@ export const translations = {
     "f5.body": "Починай одразу. Експортуй тренування у файл, відновлюй на будь-якому пристрої.",
     "f6.title": "Створено для залу",
     "f6.body": "Контрастна типографіка, великі елементи. Кожна цифра читається в середині підходу.",
-    "ph.workouts": "Список тренувань",
-    "ph.active": "Активне тренування",
-    "ph.dashboard": "Дашборд",
     "screens.eyebrow": "Подивись у дії",
     "screens.title": "Чисто. Швидко. У фокусі.",
     "screens.caption": "Гортай щоб побачити більше",
-    "scr1": "Тренування",
-    "scr2": "Активне тренування",
-    "scr3": "Деталі тренування",
-    "scr4": "Тренування завершено",
-    "scr5": "Профіль і статистика",
-    "scr.ph": "Замініть скриншотом",
     "ai.badge": "AI-аналіз",
     "ai.title": "Твій персональний<br>тренер за<br><em style=\"color:var(--acc2)\">результатами</em>",
     "ai.sub": "Після кожної сесії Fitence дає 2–3 конкретні, застосовні рекомендації — не загальні поради.",
@@ -553,7 +563,17 @@ export const translations = {
     "nav.screens": "Скриншоти",
     "nav.faq": "FAQ",
     "faq.eyebrow": "Питання",
-    "faq.title": "Часті запитання"
+    "faq.title": "Часті запитання",
+    "alt.prepare": "Екран підготовки до підходу у Fitence зі зворотним відліком",
+    "alt.work": "Екран активного тренування Fitence: поточна вправа й таймер",
+    "alt.rest": "Таймер відпочинку між підходами у Fitence",
+    "alt.dashboard": "Головний екран Fitence із тренуванням на сьогодні та активністю",
+    "alt.workouts": "Список тренувань у Fitence",
+    "alt.detail": "Деталі тренування: вправи, підходи та повторення",
+    "alt.library": "Бібліотека готових програм тренувань у Fitence",
+    "alt.profile": "Профіль і статистика тренувань у Fitence",
+    "og.imageAlt": "Fitence — офлайн-трекер тренувань для залу та HIIT на iOS і Android",
+    "tw.imageAlt": "Трекер тренувань Fitence"
   }
 };
 

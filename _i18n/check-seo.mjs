@@ -112,14 +112,23 @@ function checkSources() {
     }
   }
 
-  // A3 — every data-i18n key used by the template exists in en
-  const usedKeys = [...template.matchAll(/data-i18n="([^"]+)"/g)].map((m) => m[1]);
+  // A3 — every key the template or the generator asks for exists in en.
+  // Keys reach a page three ways: data-i18n (element text), data-i18n-alt
+  // (image alt), and direct lookups inside build.mjs (social alt, breadcrumbs,
+  // the App Store button subtitle).
+  const templateKeys = [
+    ...[...template.matchAll(/data-i18n="([^"]+)"/g)].map((m) => m[1]),
+    ...[...template.matchAll(/data-i18n-alt="([^"]+)"/g)].map((m) => m[1]),
+  ];
+  const generator = readFileSync(join(__dirname, 'build.mjs'), 'utf8');
+  const generatorKeys = [...generator.matchAll(/translations(?:\.en|\[lang\])\['([^']+)'\]/g)].map((m) => m[1]);
+  const usedKeys = [...templateKeys, ...generatorKeys];
   for (const k of new Set(usedKeys)) {
-    if (!(k in (translations.en || {}))) err(G, 'A3.key-undefined', k, 'used in template.html but absent from translations.en');
+    if (!(k in (translations.en || {}))) err(G, 'A3.key-undefined', k, 'referenced by template.html or build.mjs but absent from translations.en');
   }
   // A3b — translations that nothing renders
-  const unused = enKeys.filter((k) => !usedKeys.includes(k) && !k.startsWith('btn.appstore'));
-  if (unused.length) info(G, 'A3.key-unused', 'en', `${unused.length} translation key(s) never referenced by the template: ${unused.join(', ')}`);
+  const unused = enKeys.filter((k) => !usedKeys.includes(k));
+  if (unused.length) info(G, 'A3.key-unused', 'en', `${unused.length} translation key(s) never referenced by the template or the generator: ${unused.join(', ')}`);
 
   // A4 — meta/faq blocks complete
   for (const l of LANGS) {
@@ -397,7 +406,10 @@ function checkJsonLd() {
       const pubId = app.publisher?.['@id'];
       if (pubId && !nodes.some((n) => n['@id'] === pubId)) err(G, 'D3.publisher-dangling', l, `publisher @id "${pubId}" does not resolve to a node in the graph`);
       // aggregateRating / ratingCount are ASO-relevant rich-result eligibility signals
-      if (!app.aggregateRating) info(G, 'D3.app-rating', l, 'MobileApplication has no aggregateRating — app rich results stay ineligible');
+      // Not an actionable defect: aggregateRating must mirror verifiable store
+      // ratings. Inventing numbers violates Google's structured-data policy, so
+      // this stays a note until real Play/App Store figures are wired in.
+      if (!app.aggregateRating) info(G, 'D3.app-rating', l, 'no aggregateRating — app rich results stay ineligible; only add it from real Play/App Store figures, never hand-written ones');
       // D3b — store coverage must match config.appStore
       const urls = [app.installUrl, app.downloadUrl].filter(Boolean).join(' ');
       if (!/play\.google\.com/.test(urls)) err(G, 'D3.store-play', l, 'no Google Play URL in MobileApplication install/downloadUrl');
@@ -491,6 +503,13 @@ function checkContent() {
       for (const f of new Set(wanted)) {
         if (!have.has(f)) err(G, 'E4.screen-missing', `${l}/${f}`, `screenshot used by the landing is missing from screens/${l}/`);
       }
+      // the folders should stay in step with en/ even for files the landing does
+      // not currently render — they are the pool future sections draw from
+      if (l !== 'en' && existsSync(join(ROOT, 'fitence-workout', 'screens', 'en'))) {
+        const enSet = readdirSync(join(ROOT, 'fitence-workout', 'screens', 'en'));
+        const gap = enSet.filter((f) => !have.has(f));
+        if (gap.length) info(G, 'E4.screens-incomplete', l, `screens/${l}/ has ${gap.length} file(s) fewer than screens/en/: ${gap.join(', ')}`);
+      }
     }
 
     // E5 — in-page anchors must resolve
@@ -565,9 +584,17 @@ function checkContent() {
     };
     const en = grab(pages.en);
     const cur = grab(pages[l]);
-    const untranslated = Object.keys(cur).filter((k) => en[k] && en[k] === cur[k] && /[a-zA-Z]{4}/.test(en[k]));
+    const allowed = new Set(config.i18nSameAsEnglish?.[l] || []);
+    const untranslated = Object.keys(cur).filter(
+      (k) => en[k] && en[k] === cur[k] && /[a-zA-Z]{4}/.test(en[k]) && !allowed.has(k)
+    );
     if (untranslated.length)
-      warn(G, 'E11.i18n-fallback', l, `${untranslated.length} data-i18n block(s) render identical English text: ${untranslated.join(', ')}`);
+      warn(G, 'E11.i18n-fallback', l, `${untranslated.length} data-i18n block(s) render identical English text: ${untranslated.join(', ')} — translate them, or list the key in config.i18nSameAsEnglish.${l} if the word is genuinely the same`);
+    // an allowlist entry that no longer matches is stale bookkeeping
+    for (const k of allowed) {
+      if (!(k in cur)) warn(G, 'E11.allowlist-stale', `${l}:${k}`, 'listed in config.i18nSameAsEnglish but the key is not rendered');
+      else if (en[k] !== cur[k]) warn(G, 'E11.allowlist-stale', `${l}:${k}`, 'listed in config.i18nSameAsEnglish but the translation now differs from English — drop it from the list');
+    }
   }
 }
 

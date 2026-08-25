@@ -7,22 +7,21 @@
 ```
 /
 ├── index.html                   # Главная страница компании (без i18n)
-├── fitence-workout-planner.html # Дубль лендинга (устаревший, не использовать)
+├── _i18n/                       # Источник правды лендинга (не публикуется)
+│   ├── translations.mjs         # Переводы + SEO-строки + конфиг
+│   ├── template.html            # Разметка с токенами {{...}} и data-i18n
+│   ├── build.mjs                # Генератор страниц и sitemap.xml
+│   └── check-seo.mjs            # Проверка SEO/i18n-инвариантов
 ├── fitence-workout/
-│   ├── index.html               # Основной лендинг Fitence (это главный файл)
-│   ├── screens/
-│   │   ├── en/                  # Скриншоты EN (дефолт, используются как фолбэк)
-│   │   ├── ru/                  # Скриншоты RU (пусто — фолбэк на en/)
-│   │   ├── ua/                  # Скриншоты UA (пусто — фолбэк на en/)
-│   │   ├── fr/                  # Скриншоты FR (пусто — фолбэк на en/)
-│   │   ├── de/                  # Скриншоты DE (пусто — фолбэк на en/)
-│   │   ├── es/                  # Скриншоты ES (пусто — фолбэк на en/)
-│   │   └── it/                  # Скриншоты IT (пусто — фолбэк на en/)
+│   ├── index.html               # Сгенерированный лендинг EN (x-default)
+│   ├── <lang>/index.html        # Сгенерированные ru ua fr de es it
+│   ├── screens/<lang>/          # Локализованные скриншоты (все языки заполнены)
 │   ├── privacy.html
 │   └── terms.html
-├── privacy.html
-├── terms.html
-└── screens/                     # Устаревшая папка — не использовать
+├── privacy.html                 # noindex-редирект на fitence-workout/privacy.html
+├── terms.html                   # noindex-редирект на fitence-workout/terms.html
+├── sitemap.xml                  # Генерируется build.mjs
+└── robots.txt
 ```
 
 ## Рабочий процесс
@@ -59,17 +58,27 @@
 
 **Эти сгенерированные файлы НЕЛЬЗЯ править руками** — правки затрутся при следующей сборке. Меняй `template.html` / `translations.mjs`, затем:
 ```
-node _i18n/build.mjs
+node _i18n/build.mjs && node _i18n/check-seo.mjs
 ```
-Команда пересоздаёт `fitence-workout/index.html`, все `fitence-workout/<lang>/index.html` и `sitemap.xml`.
+Первая команда пересоздаёт `fitence-workout/index.html`, все `fitence-workout/<lang>/index.html` и `sitemap.xml`. Вторая проверяет результат по SEO/i18n-инвариантам и возвращает код 1 при ошибках — прогонять после каждой сборки.
+
+### Перевод текста
+- **Текст элемента** — атрибут `data-i18n="key"`, генератор подставляет содержимое.
+- **Alt картинок** — атрибут `data-i18n-alt="key"`, генератор подставляет `alt`. Alt локализован, у новой картинки должен быть ключ во всех языках.
+- **Head** — `meta[lang].title` / `meta[lang].desc`, плюс `og.imageAlt` / `tw.imageAlt` в `translations`.
+- Перевод, который законно совпадает с английским (например «Support» во французском), нужно перечислить в `config.i18nSameAsEnglish.<lang>` — иначе `check-seo.mjs` посчитает его непереведённым.
+
+### Ограничения
+- `<title>` ≤ 60 символов, `<meta name="description">` ≤ 160 — иначе обрежется в выдаче.
+- `aggregateRating` в JSON-LD не выдумывать: он должен отражать реальные оценки в Play/App Store.
 
 ### Добавление нового языка
 1. Добавить код языка в `_i18n/translations.mjs`: блок в `translations`, строки в `meta`, записи в `config` (`LANGS`, `htmlLang`, `ogLocale`, `flags`).
 2. Положить локализованные скриншоты в `fitence-workout/screens/<lang>/`.
-3. Запустить `node _i18n/build.mjs` и закоммитить результат.
+3. Запустить `node _i18n/build.mjs && node _i18n/check-seo.mjs`, устранить найденное и закоммитить результат.
 
 ### Скриншоты
-- В шаблоне теги вида `<img ... data-screen="filename.jpg">`; генератор проставляет `src` на `screens/<lang>/filename.jpg` для нужного языка.
+- В шаблоне теги вида `<img ... data-screen="filename.jpg" data-i18n-alt="alt.key">`; генератор проставляет `src` на `screens/<lang>/filename.jpg` и локализованный `alt`.
 - Полный набор скриншотов лендинга должен лежать в каждой папке `screens/<lang>/` (если файла нет — положить с тем же именем).
 
 ## Связанные проекты

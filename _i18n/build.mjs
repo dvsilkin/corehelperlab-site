@@ -43,7 +43,19 @@ function ogLocaleAlternates(lang) {
     .join('\n');
 }
 
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout';
+
+// Store links and the advertised platforms follow config.appStore, so the
+// structured data never claims an iOS build that is not live yet.
+function storeUrls() {
+  const urls = [PLAY_URL];
+  if (config.appStore?.available && config.appStore.url) urls.push(config.appStore.url);
+  return urls;
+}
+const one = (arr) => (arr.length === 1 ? arr[0] : arr);
+
 function jsonLd(lang) {
+  const stores = storeUrls();
   const obj = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -58,16 +70,34 @@ function jsonLd(lang) {
       {
         '@type': 'MobileApplication',
         name: 'Fitence: Workout Planner',
-        operatingSystem: 'Android, iOS',
+        operatingSystem: stores.length > 1 ? 'Android, iOS' : 'Android',
         applicationCategory: 'HealthApplication',
         url: urlFor(lang),
         inLanguage: htmlLang[lang],
         image: 'https://corehelperlab.com/fitence-workout/og-image.jpg',
         description: meta[lang].desc,
-        installUrl: 'https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout',
-        downloadUrl: 'https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout',
+        installUrl: one(stores),
+        downloadUrl: one(stores),
+        sameAs: stores,
         publisher: { '@id': 'https://corehelperlab.com/#organization' },
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: translations[lang]['footer.home'] ?? translations.en['footer.home'],
+            item: BASE + '/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Fitence: Workout Planner',
+            item: urlFor(lang),
+          },
+        ],
       },
     ],
   };
@@ -79,13 +109,9 @@ function headSeo(lang) {
   const desc = escAttr(meta[lang].desc);
   const canonical = urlFor(lang);
   const asset = lang === 'en' ? '' : '../';
-  const keywords =
-    lang === 'en'
-      ? `  <meta name="keywords" content="workout tracker, gym app, HIIT planner, offline workout app, strength training app, AI fitness coach, workout planner iOS Android">\n`
-      : '';
   return `  <title>${title}</title>
   <meta name="description" content="${desc}">
-${keywords}  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0D0D16">
   <link rel="canonical" href="${canonical}">
 
@@ -109,7 +135,7 @@ ${hreflangBlock()}
   <meta property="og:image" content="https://corehelperlab.com/fitence-workout/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Fitence — offline gym &amp; HIIT workout tracker for iOS and Android">
+  <meta property="og:image:alt" content="${escAttr(translations[lang]['og.imageAlt'])}">
   <meta property="og:locale" content="${ogLocale[lang]}">
 ${ogLocaleAlternates(lang)}
 
@@ -118,7 +144,7 @@ ${ogLocaleAlternates(lang)}
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${desc}">
   <meta name="twitter:image" content="https://corehelperlab.com/fitence-workout/og-image.jpg">
-  <meta name="twitter:image:alt" content="Fitence workout tracker">
+  <meta name="twitter:image:alt" content="${escAttr(translations[lang]['tw.imageAlt'])}">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -206,6 +232,19 @@ ${items}
       </div>`;
 }
 
+// <img ... data-i18n-alt="key" alt="..."> — the alt text is translated too, so
+// non-English pages do not ship English image descriptions.
+function bakeAltI18n(html, lang) {
+  return html.replace(/<img\b([^>]*?)\sdata-i18n-alt="([^"]+)"([^>]*?)>/g, (m, pre, key, post) => {
+    const t = translations[lang][key] ?? translations.en[key];
+    if (t == null) return m;
+    const tag = `<img${pre} data-i18n-alt="${key}"${post}>`;
+    return / alt="[^"]*"/.test(tag)
+      ? tag.replace(/ alt="[^"]*"/, ` alt="${escAttr(t)}"`)
+      : tag.replace(/^<img/, `<img alt="${escAttr(t)}"`);
+  });
+}
+
 function bakeI18n(html, lang) {
   return html.replace(
     /<([a-zA-Z0-9]+)([^>]*?)\sdata-i18n="([^"]+)"([^>]*?)>([\s\S]*?)<\/\1>/g,
@@ -230,6 +269,7 @@ function renderPage(lang) {
     .replace('{{FAQ}}', faqItems(lang))
     .replace('{{FAQ_JSONLD}}', faqJsonLd(lang));
   html = bakeI18n(html, lang);
+  html = bakeAltI18n(html, lang);
   return html;
 }
 
