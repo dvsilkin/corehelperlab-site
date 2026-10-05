@@ -165,7 +165,7 @@
     <header>
         <a href="index.html">← Fitence: Workout Planner</a>
         <h1>Privacy Policy</h1>
-        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Effective date: June 16, 2026</p>
+        <p class="meta">Fitence: Workout Planner &nbsp;·&nbsp; Effective date: October 5, 2026</p>
     </header>
 
     <main>
@@ -185,32 +185,32 @@
             <p>By default, the App can be used without registration. In this mode:</p>
             <ul>
                 <li>workout data, progress, and settings are stored locally on your device;</li>
-                <li>the Developer does not process this data on its servers and does not have direct access to it.</li>
+                <li>the Developer does not process this data on its servers and does not have direct access to it,
+                    except for the data you choose to send to the AI features (Section 4.5), which passes through
+                    our server only to complete the request and is not stored there beyond short-lived technical logs.</li>
             </ul>
 
-            <h3>1.2 Use With an Account (Google / Apple ID)</h3>
-            <p>If you connect an account:</p>
-            <ul>
-                <li>your data is synced via Firebase (Google LLC);</li>
-                <li>a unique user identifier (UID) is used;</li>
-                <li>data is used only for backup and synchronization across devices.</li>
-            </ul>
-            <p>Access to this data is restricted to you as the authenticated user.</p>
+            <h3>1.2 Accounts and Technical Identifier</h3>
+            <p>The App does not currently offer user accounts, sign-in or cloud sync. You can keep a backup of
+                your workouts with the in-app export (Profile → Export / Import).</p>
+            <p>When you use an AI feature, the App obtains an <strong>anonymous identifier</strong> from Firebase
+                Authentication (Google LLC). It is not linked to your name, email or any account and is used only to
+                authorize AI requests and to enforce the daily limit on them: our server stores this identifier with
+                a daily request counter. Firebase App Check is used to confirm that requests come from a genuine copy
+                of the App.</p>
 
             <h3>1.3 Health and Fitness Data</h3>
             <p>The App collects workout-related data including exercise names, sets, repetitions,
                 weight, duration, and training history. This data is classified as
                 <strong>health and fitness data</strong>.
             </p>
-            <ul>
-                <li><strong>Without an account</strong> — stored locally on your device only;</li>
-                <li><strong>With an account</strong> — synced via Firebase for backup and cross-device access.</li>
-            </ul>
+            <p>This data is stored locally on your device only.</p>
             <p>This data is used solely to provide App functionality and is
                 <strong>never sold or shared with third parties for advertising purposes</strong>.
-                If you choose to use the optional AI-powered workout analysis, the relevant
-                workout and profile data described in Section 4.5 is shared with our AI provider
-                (Anthropic) only after you give explicit in-app consent. See Section 4.5 for details.
+                If you choose to use the optional AI features (workout analysis, program generation
+                and period review), the workout, profile and questionnaire data described in
+                Section 4.5 is shared with our AI provider (Anthropic) only after you give explicit
+                in-app consent. See Section 4.5 for details.
             </p>
         </div>
 
@@ -225,15 +225,17 @@
             <h3>2.1 Types of Data Collected</h3>
             <p>We gather the following information to ensure app functionality, performance, and personalization:</p>
             <ul>
-                <li><strong>Authentication Data:</strong> We receive your display name, email address, and provider identifier when you
-                    sign in via Google or Apple.</li>
+                <li><strong>Technical Identifier:</strong> An anonymous Firebase Authentication identifier, used only for AI requests
+                    and their daily limit — see Section 1.2. We do not collect your name or email address.</li>
                 <li><strong>Health & Fitness Data:</strong> We process your workout history, exercise data, and body metrics such as
-                    weight, height, and date of birth. With your explicit in-app consent, a subset of this data is shared with our
-                    AI provider (Anthropic) to generate workout analysis — see Section 4.5.</li>
+                    weight, height, and month and year of birth, as well as your training questionnaire answers. With your explicit
+                    in-app consent, a subset of this data, together with your questionnaire answers, is shared with our AI provider
+                    (Anthropic) to power the AI features — see Section 4.5.</li>
                 <li><strong>App Activity:</strong> We track in-app events and feature usage via Firebase Analytics and Mixpanel to improve our
                     services. A pseudonymous device identifier (Firebase App Instance ID) is used — no name, email, or other personal data is associated with analytics.</li>
-                <li><strong>App Info & Performance:</strong> We collect crash logs and diagnostic data through Firebase Crashlytics to
-                    maintain app stability.</li>
+                <li><strong>App Info & Performance:</strong> App error events (error code, a short technical message and the
+                    place in the App) are recorded through Firebase Analytics to maintain app stability. We do not use a crash-reporting
+                    SDK.</li>
                 <li><strong>Device Identifiers:</strong> With your explicit consent, we may use your Advertising ID / IDFA for AdMob.</li>
                 <li><strong>Purchase History:</strong> We track subscription and purchase status through RevenueCat to manage your access
                     to premium features.</li>
@@ -264,7 +266,7 @@
             <ul>
                 <li><strong>Contract performance</strong> — to provide App functionality;</li>
                 <li><strong>Legitimate interests</strong> — analytics, improvement, stability;</li>
-                <li><strong>User consent</strong> — where required (e.g., personalized ads; sharing workout and profile data with our AI provider for AI analysis).</li>
+                <li><strong>User consent</strong> — where required (e.g., personalized ads; sharing workout, profile and questionnaire data with our AI provider for the AI features).</li>
             </ul>
         </div>
 
@@ -278,7 +280,7 @@
             <ul>
                 <li>device information;</li>
                 <li>in-app events;</li>
-                <li>crash reports;</li>
+                <li>app error events;</li>
                 <li>aggregated usage statistics.</li>
             </ul>
             <p>This data does not directly identify users.<br>
@@ -314,29 +316,40 @@
             <p>Mixpanel Privacy Policy: <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank"
                     rel="noopener">mixpanel.com/legal/privacy-policy</a></p>
 
-            <h3>4.5 Anthropic (AI Workout Analysis)</h3>
-            <p>The App offers an optional AI-powered analysis of your completed workouts. This feature is
-                provided using the AI models of <strong>Anthropic, PBC</strong> ("Anthropic"). The request is
-                routed through our secure Firebase Cloud Function (which holds the API credentials) to the
-                Anthropic API.</p>
-            <p><strong>This feature is strictly opt-in.</strong> No data is sent to Anthropic until you tap to
-                request an analysis and grant explicit consent on the in-app disclosure screen shown before the
-                first request.</p>
-            <p>When you request an analysis, the following data is sent for that single request:</p>
+            <h3>4.5 Anthropic (AI Features)</h3>
+            <p>The App offers optional AI features powered by the AI models of
+                <strong>Anthropic, PBC</strong> ("Anthropic"): analysis of a completed workout,
+                generation of a starter workout program, and a review of your training over a period
+                with suggestions for adjusting your program. Requests are routed through our secure
+                Firebase Cloud Function (which holds the API credentials) to the Anthropic API.</p>
+            <p><strong>These features are strictly opt-in.</strong> No data is sent to Anthropic
+                until you grant explicit consent on the in-app disclosure screen, and then only when
+                you use an AI feature. If the set of data or purposes described here is extended, the
+                App asks for your consent again.</p>
+            <p>Depending on the feature you use, the following data is sent with that request:</p>
             <ul>
-                <li><strong>Profile data:</strong> sex, age, height, weight, calculated BMI, and training goal;</li>
-                <li><strong>Workout data:</strong> workout name, date, planned and actual duration, and per-exercise
-                    details (sets, repetitions, weights, durations, and volumes).</li>
+                <li><strong>Profile data:</strong> sex, age, height, weight, calculated BMI, training
+                    goal and target weight;</li>
+                <li><strong>Questionnaire answers:</strong> available equipment, fitness level, preferred
+                    number of workouts per week, target muscle groups, and areas where you want to
+                    avoid load;</li>
+                <li><strong>Workout data:</strong> workout names, scheduled weekdays and time, exercises
+                    with their descriptions, and planned and actual sets, repetitions, weights and
+                    durations;</li>
+                <li><strong>Training history</strong> (period review only): your completed workouts in the
+                    reviewed period — dates, duration, and planned versus actual results per exercise.</li>
             </ul>
-            <p>We do <strong>not</strong> send your name, email address, account identifier, precise location, or any
-                payment information to Anthropic.</p>
-            <p>The data is used <strong>only</strong> to generate your workout analysis. Under Anthropic's commercial
-                terms, your inputs and outputs are <strong>not used to train Anthropic's models</strong> and are not
-                used for advertising. Anthropic processes the data as our service provider and provides a level of
-                data protection equivalent to that described in this Policy, including contractual data-protection
-                commitments and Standard Contractual Clauses for international transfers (see Section 8).</p>
-            <p>You can decline at the consent screen; declining means no data is shared and the AI analysis is not
-                generated. Anthropic Privacy Policy:
+            <p>We do <strong>not</strong> send your name, email address, account identifier, precise
+                location, or any payment information to Anthropic.</p>
+            <p>The data is used <strong>only</strong> to provide these AI features. Under Anthropic's
+                commercial terms, your inputs and outputs are <strong>not used to train Anthropic's
+                models</strong> and are not used for advertising. Anthropic processes the data as our
+                service provider and provides a level of data protection equivalent to that described
+                in this Policy, including contractual data-protection commitments and Standard
+                Contractual Clauses for international transfers (see Section 8).</p>
+            <p>You can decline at the consent screen, and you can withdraw consent at any time in
+                Profile → Settings → AI data processing; without consent no data is shared and the AI
+                features are unavailable. Anthropic Privacy Policy:
                 <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a></p>
         </div>
 
@@ -354,7 +367,7 @@
                 the App uses Google's <strong>User Messaging Platform (UMP)</strong> to request
                 consent before showing personalized ads. Users who do not consent will receive
                 non-personalized ads only. Consent can be withdrawn or changed at any time
-                via App Settings → Privacy.
+                via Profile → Settings → Ad privacy.
             </p>
             <p>
                 Depending on device settings and applicable laws (e.g., GDPR),
@@ -386,15 +399,16 @@
             <div class="section-number">Section 7</div>
             <h2>Data Deletion</h2>
             <p>
-                Data is stored for as long as your account remains active or as necessary
-                to provide the App's services. You may:
+                Your workout data is stored on your device until you delete it. The anonymous
+                identifier and AI request counter (Section 1.2) are kept on our server as long as
+                necessary to provide the AI features. You may:
             </p>
             <ul>
                 <li>delete the App (removes all local data);</li>
-                <li>delete your account in the App (Profile → Data → Reset & Delete Account);</li>
+                <li>delete all App data on your device (Profile → Data → Reset & Delete Account);</li>
                 <li>request deletion via email: <a href="mailto:info@corehelperlab.com">info@corehelperlab.com</a></li>
             </ul>
-            <p>Cloud data is deleted within 30 days of the request.</p>
+            <p>Data held on our server is deleted within 30 days of an email request.</p>
         </div>
 
         <!-- 8 -->
