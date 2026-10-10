@@ -136,11 +136,15 @@ const APPLE_SVG = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   fill="var(--txt)" />
               </svg>`;
 
-function appStoreButton(lang) {
+function appStoreButton(lang, placement) {
   const sub = translations[lang]['btn.appstore.sub'] || 'Download on the';
   const a = config.appStore || {};
   if (a.available && a.url) {
-    return `<a href="${a.url}" class="store-btn">
+    // Campaign attribution: pt = provider token (App Store Connect), ct = placement-lang (Apple has no medium param).
+    const href = a.providerToken
+      ? `${a.url}?pt=${a.providerToken}&amp;ct=${placement}-${lang}&amp;mt=8`
+      : a.url;
+    return `<a href="${href}" class="store-btn">
               ${APPLE_SVG}
               <div class="store-btn-text">
                 <small>${escText(sub)}</small>
@@ -226,7 +230,8 @@ function renderPage(lang) {
     .split('{{HOME}}').join(pathFor(lang))
     .replace('{{HEAD_SEO}}', headSeo(lang))
     .replace('{{LANG_SWITCHER}}', langSwitcher(lang))
-    .split('{{APPSTORE_BTN}}').join(appStoreButton(lang))
+    .split('{{APPSTORE_BTN:hero}}').join(appStoreButton(lang, 'hero'))
+    .split('{{APPSTORE_BTN:footer}}').join(appStoreButton(lang, 'footer'))
     .replace('{{FAQ}}', faqItems(lang))
     .replace('{{FAQ_JSONLD}}', faqJsonLd(lang));
   html = bakeI18n(html, lang);
