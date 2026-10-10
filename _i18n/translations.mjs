@@ -49,8 +49,8 @@ export const config = {
 
 export const meta = {
   "en": {
-    "title": "Fitence — Offline Gym & HIIT Workout Tracker for iOS & Android",
-    "desc": "Fitence is an offline-first workout tracker for strength & HIIT. Plan workouts, train on autopilot with audio cues, and get AI feedback after every session. No account, no internet needed. Free on iOS & Android."
+    "title": "Fitence — Offline Gym Log & Rest Timer (iOS, Android)",
+    "desc": "Offline gym log with rest timer, audio cues and an AI coach. Build your program or start from a ready-made one. No account needed."
   },
   "ru": {
     "title": "Fitence — офлайн-трекер тренировок для зала и HIIT (iOS, Android)",
@@ -82,7 +82,7 @@ export const translations = {
   "en": {
     "hero.label": "Workout app for iOS & Android",
     "hero.title": "Train without<br><em>thinking</em> about<br>the app",
-    "hero.sub": "Plan workouts, train on autopilot, get AI feedback. No internet needed.",
+    "hero.sub": "Offline gym log with rest timer, audio cues and an AI coach. Build your own program or start from a ready-made one.",
     "btn.appstore.sub": "Download on the",
     "btn.gplay.sub": "Get it on",
     "stat.offline": "Works offline",
@@ -95,11 +95,11 @@ export const translations = {
     "f1.title": "Autopilot mode",
     "f1.body": "Timers count down, audio cues fire at the right moment, screen stays readable from 2 m away. Phone on the floor — you're still in control.",
     "f2.title": "Flexible builder",
-    "f2.body": "Strength, HIIT, circuits. Exercises, sets, reps, rest timers, and technique notes — all in one place.",
+    "f2.body": "Strength, HIIT, circuits. Exercises, sets, reps, rest timers and technique notes — or start from a ready-made program for your gear.",
     "f3.title": "AI analysis",
     "f3.body": "After every session Fitence gives 2–3 concrete recommendations: load, technique, recovery.",
     "f4.title": "Offline first",
-    "f4.body": "Train anywhere — no Wi-Fi, no cellular. Data syncs automatically when you're back online.",
+    "f4.body": "Train anywhere — no Wi-Fi, no cellular. Everything you need for the session is already on your phone.",
     "f5.title": "No account needed",
     "f5.body": "Start immediately. Export workouts to a file, restore on any device at any time.",
     "f6.title": "Built for the gym",
@@ -132,9 +132,9 @@ export const translations = {
     "d2.body": "Open the app and train. No sign-up, no email. One tap from your first workout.",
     "d3.title": "Backup & transfer",
     "d3.body": "Export all workouts and settings to a file. Restore on any device — new phone, no problem.",
-    "d4.title": "No tracking",
-    "d4.body": "Without an account, your data never leaves the device. No analytics on your fitness data, ever.",
-    "cta.title": "Ready to train<br>without <em>distractions?</em>",
+    "d4.title": "Private by default",
+    "d4.body": "Your workouts stay on your device. AI features send data only with your explicit consent, which you can withdraw any time.",
+    "cta.title": "Ready to train<br>without the <em>guesswork?</em>",
     "cta.sub": "Free to download. No account needed. Start today.",
     "footer.home": "Home",
     "footer.privacy": "Privacy Policy",
@@ -167,7 +167,7 @@ export const translations = {
     "f3.title": "AI-анализ",
     "f3.body": "После каждой тренировки Fitence даёт 2–3 конкретные рекомендации: нагрузка, техника, восстановление.",
     "f4.title": "Сначала офлайн",
-    "f4.body": "Тренируйся где угодно — без Wi-Fi и мобильной сети. Данные синхронизируются автоматически.",
+    "f4.body": "Тренируйся где угодно — без Wi-Fi и мобильной сети. Всё нужное для тренировки уже на устройстве.",
     "f5.title": "Без аккаунта",
     "f5.body": "Начни сразу. Экспортируй тренировки в файл, восстанови на любом устройстве в любое время.",
     "f6.title": "Создан для зала",
@@ -200,9 +200,9 @@ export const translations = {
     "d2.body": "Открой приложение и тренируйся. Никакой регистрации. Одно нажатие до первой тренировки.",
     "d3.title": "Бэкап и перенос",
     "d3.body": "Экспортируй тренировки и настройки в файл. Восстанови на любом устройстве — новый телефон не проблема.",
-    "d4.title": "Без слежки",
-    "d4.body": "Без аккаунта данные не покидают устройство. Никакой аналитики фитнес-данных.",
-    "cta.title": "Готов тренироваться<br>без <em>отвлечений?</em>",
+    "d4.title": "Приватно по умолчанию",
+    "d4.body": "Тренировки хранятся на устройстве. AI-функции отправляют данные только с твоего явного согласия, и его можно отозвать.",
+    "cta.title": "Готов тренироваться<br>без <em>лишних действий?</em>",
     "cta.sub": "Бесплатно. Без аккаунта. Начни сегодня.",
     "footer.home": "Главная",
     "footer.privacy": "Политика конфиденциальности",
@@ -235,7 +235,7 @@ export const translations = {
     "f3.title": "Analyse IA",
     "f3.body": "Après chaque séance, Fitence donne 2–3 recommandations concrètes : charge, technique, récupération.",
     "f4.title": "Hors ligne en priorité",
-    "f4.body": "Entraînez-vous partout — sans Wi-Fi, sans réseau. Les données se synchronisent automatiquement à la reconnexion.",
+    "f4.body": "Entraînez-vous partout — sans Wi-Fi, sans réseau. Tout ce qu'il faut pour la séance est déjà sur l'appareil.",
     "f5.title": "Sans compte",
     "f5.body": "Commencez immédiatement. Exportez les séances dans un fichier, restaurez sur n'importe quel appareil.",
     "f6.title": "Fait pour la salle",
@@ -268,9 +268,9 @@ export const translations = {
     "d2.body": "Ouvrez l'appli et entraînez-vous. Pas d'inscription, pas d'e-mail. Un tap jusqu'à votre première séance.",
     "d3.title": "Sauvegarde et transfert",
     "d3.body": "Exportez toutes les séances et paramètres dans un fichier. Restaurez sur n'importe quel appareil.",
-    "d4.title": "Sans tracking",
-    "d4.body": "Sans compte, vos données ne quittent jamais l'appareil. Aucune analyse de vos données fitness.",
-    "cta.title": "Prêt à vous entraîner<br>sans <em>distractions ?</em>",
+    "d4.title": "Privé par défaut",
+    "d4.body": "Vos séances restent sur l'appareil. Les fonctions IA n'envoient des données qu'avec votre consentement explicite, révocable à tout moment.",
+    "cta.title": "Prêt à vous entraîner<br>sans <em>prise de tête ?</em>",
     "cta.sub": "Gratuit. Sans compte. Commencez aujourd'hui.",
     "footer.home": "Accueil",
     "footer.privacy": "Politique de confidentialité",
@@ -303,7 +303,7 @@ export const translations = {
     "f3.title": "KI-Analyse",
     "f3.body": "Nach jeder Einheit gibt Fitence 2–3 konkrete Empfehlungen: Belastung, Technik, Erholung.",
     "f4.title": "Offline-First",
-    "f4.body": "Trainiere überall — kein WLAN, kein Mobilnetz. Daten synchronisieren sich automatisch bei Verbindung.",
+    "f4.body": "Trainiere überall — kein WLAN, kein Mobilnetz. Alles für dein Training liegt bereits auf dem Gerät.",
     "f5.title": "Kein Konto nötig",
     "f5.body": "Sofort loslegen. Trainings in eine Datei exportieren, auf jedem Gerät wiederherstellen.",
     "f6.title": "Fürs Fitnessstudio gebaut",
@@ -336,9 +336,9 @@ export const translations = {
     "d2.body": "App öffnen und trainieren. Keine Registrierung, keine E-Mail. Ein Tap bis zum ersten Training.",
     "d3.title": "Backup & Transfer",
     "d3.body": "Alle Trainings und Einstellungen in eine Datei exportieren. Auf jedem Gerät wiederherstellen.",
-    "d4.title": "Kein Tracking",
-    "d4.body": "Ohne Konto verlassen deine Daten das Gerät nie. Keine Analyse deiner Fitnessdaten.",
-    "cta.title": "Bereit, ohne<br><em>Ablenkung</em> zu trainieren?",
+    "d4.title": "Standardmäßig privat",
+    "d4.body": "Deine Trainings bleiben auf dem Gerät. KI-Funktionen senden Daten nur mit deiner ausdrücklichen Einwilligung – jederzeit widerrufbar.",
+    "cta.title": "Bereit, ohne<br><em>Umwege</em> zu trainieren?",
     "cta.sub": "Kostenlos. Kein Konto. Starte heute.",
     "footer.home": "Startseite",
     "footer.privacy": "Datenschutzrichtlinie",
@@ -371,7 +371,7 @@ export const translations = {
     "f3.title": "Análisis IA",
     "f3.body": "Después de cada sesión Fitence da 2–3 recomendaciones concretas: carga, técnica, recuperación.",
     "f4.title": "Sin conexión primero",
-    "f4.body": "Entrena donde sea — sin Wi-Fi, sin datos. Los datos se sincronizan automáticamente al reconectarte.",
+    "f4.body": "Entrena donde sea — sin Wi-Fi, sin datos. Todo lo necesario para tu sesión ya está en el dispositivo.",
     "f5.title": "Sin cuenta",
     "f5.body": "Empieza de inmediato. Exporta entrenamientos a un archivo, restáuralos en cualquier dispositivo.",
     "f6.title": "Hecho para el gimnasio",
@@ -404,9 +404,9 @@ export const translations = {
     "d2.body": "Abre la app y entrena. Sin registro, sin correo. Un toque hasta tu primer entrenamiento.",
     "d3.title": "Copia de seguridad y transferencia",
     "d3.body": "Exporta todos los entrenamientos y ajustes a un archivo. Restáura en cualquier dispositivo.",
-    "d4.title": "Sin rastreo",
-    "d4.body": "Sin cuenta, tus datos nunca salen del dispositivo. Sin análisis de tus datos de fitness.",
-    "cta.title": "¿Listo para entrenar<br>sin <em>distracciones?</em>",
+    "d4.title": "Privado por defecto",
+    "d4.body": "Tus entrenos se quedan en el dispositivo. Las funciones de IA solo envían datos con tu consentimiento explícito, revocable en cualquier momento.",
+    "cta.title": "¿Listo para entrenar<br>sin <em>complicaciones?</em>",
     "cta.sub": "Gratis. Sin cuenta. Empieza hoy.",
     "footer.home": "Inicio",
     "footer.privacy": "Política de privacidad",
@@ -439,7 +439,7 @@ export const translations = {
     "f3.title": "Analisi IA",
     "f3.body": "Dopo ogni sessione Fitence dà 2–3 raccomandazioni concrete: carico, tecnica, recupero.",
     "f4.title": "Offline prima di tutto",
-    "f4.body": "Allenati ovunque — senza Wi-Fi, senza rete. I dati si sincronizzano automaticamente alla riconnessione.",
+    "f4.body": "Allenati ovunque — senza Wi-Fi, senza rete. Tutto il necessario per l'allenamento è già sul dispositivo.",
     "f5.title": "Senza account",
     "f5.body": "Inizia subito. Esporta gli allenamenti in un file, ripristina su qualsiasi dispositivo.",
     "f6.title": "Fatto per la palestra",
@@ -472,9 +472,9 @@ export const translations = {
     "d2.body": "Apri l'app e allenati. Nessuna registrazione, nessuna e-mail. Un tap al primo allenamento.",
     "d3.title": "Backup e trasferimento",
     "d3.body": "Esporta tutti gli allenamenti e le impostazioni in un file. Ripristina su qualsiasi dispositivo.",
-    "d4.title": "Nessun tracciamento",
-    "d4.body": "Senza account, i tuoi dati non lasciano mai il dispositivo. Nessuna analisi dei tuoi dati fitness.",
-    "cta.title": "Pronto ad allenarti<br>senza <em>distrazioni?</em>",
+    "d4.title": "Privato per impostazione predefinita",
+    "d4.body": "I tuoi allenamenti restano sul dispositivo. Le funzioni IA inviano dati solo con il tuo consenso esplicito, revocabile in qualsiasi momento.",
+    "cta.title": "Pronto ad allenarti<br>senza <em>complicazioni?</em>",
     "cta.sub": "Gratis. Senza account. Inizia oggi.",
     "footer.home": "Home",
     "footer.privacy": "Informativa sulla privacy",
@@ -507,7 +507,7 @@ export const translations = {
     "f3.title": "AI-аналіз",
     "f3.body": "Після кожного тренування Fitence дає 2–3 конкретні рекомендації: навантаження, техніка, відновлення.",
     "f4.title": "Спочатку офлайн",
-    "f4.body": "Тренуйся будь-де — без Wi-Fi і мобільної мережі. Дані синхронізуються автоматично.",
+    "f4.body": "Тренуйся будь-де — без Wi-Fi і мобільної мережі. Усе потрібне для тренування вже на пристрої.",
     "f5.title": "Без облікового запису",
     "f5.body": "Починай одразу. Експортуй тренування у файл, відновлюй на будь-якому пристрої.",
     "f6.title": "Створено для залу",
@@ -540,9 +540,9 @@ export const translations = {
     "d2.body": "Відкрий застосунок і тренуйся. Жодної реєстрації. Одне натискання до першого тренування.",
     "d3.title": "Бекап і перенесення",
     "d3.body": "Експортуй тренування і налаштування у файл. Відновлюй на будь-якому пристрої.",
-    "d4.title": "Без стеження",
-    "d4.body": "Без облікового запису дані не покидають пристрій. Жодної аналітики фітнес-даних.",
-    "cta.title": "Готовий тренуватися<br>без <em>відволікань?</em>",
+    "d4.title": "Приватно за замовчуванням",
+    "d4.body": "Тренування зберігаються на пристрої. AI-функції надсилають дані лише з твоєї явної згоди, і її можна відкликати.",
+    "cta.title": "Готовий тренуватися<br>без <em>зайвих дій?</em>",
     "cta.sub": "Безкоштовно. Без облікового запису. Починай сьогодні.",
     "footer.home": "Головна",
     "footer.privacy": "Політика конфіденційності",
@@ -561,7 +561,7 @@ export const faq = {
   "en": [
     [
       "Is Fitence free?",
-      "Yes. Fitence is free to download — plan workouts, train on autopilot and get AI feedback with no paywall."
+      "Yes. Fitence is free to download and use. Optional extras: ad removal as a one-time purchase and a Premium subscription for the AI features."
     ],
     [
       "Do I need an account?",
@@ -569,7 +569,7 @@ export const faq = {
     ],
     [
       "Does it really work offline?",
-      "Yes. Every core feature works with no internet connection. Your data stays on the device and syncs automatically once you are back online."
+      "Yes. Every core feature works with no internet connection. Your data stays on the device and no account is required — only the optional AI features go online, with your consent."
     ],
     [
       "Which platforms is Fitence on?",
@@ -583,7 +583,7 @@ export const faq = {
   "ru": [
     [
       "Fitence бесплатный?",
-      "Да. Fitence бесплатен для скачивания — планируйте тренировки, работайте на автопилоте и получайте AI-разбор без платных стен."
+      "Да. Fitence можно скачать и использовать бесплатно. Дополнительно есть разовое отключение рекламы и подписка Premium для AI-функций."
     ],
     [
       "Нужен ли аккаунт?",
@@ -591,7 +591,7 @@ export const faq = {
     ],
     [
       "Действительно работает офлайн?",
-      "Да. Все основные функции работают без интернета. Данные хранятся на устройстве и синхронизируются автоматически, когда появится связь."
+      "Да. Все основные функции работают без интернета. Данные хранятся на устройстве, аккаунт не нужен — в сеть выходят только необязательные AI-функции, с твоего согласия."
     ],
     [
       "На каких платформах доступен Fitence?",
@@ -605,7 +605,7 @@ export const faq = {
   "ua": [
     [
       "Fitence безкоштовний?",
-      "Так. Fitence безкоштовний для завантаження — плануйте тренування, працюйте на автопілоті й отримуйте AI-аналіз без платних обмежень."
+      "Так. Fitence можна завантажити й користуватися безкоштовно. Додатково є разове вимкнення реклами та підписка Premium для AI-функцій."
     ],
     [
       "Чи потрібен обліковий запис?",
@@ -613,7 +613,7 @@ export const faq = {
     ],
     [
       "Справді працює офлайн?",
-      "Так. Усі основні функції працюють без інтернету. Дані зберігаються на пристрої та синхронізуються автоматично, коли зʼявиться звʼязок."
+      "Так. Усі основні функції працюють без інтернету. Дані зберігаються на пристрої, акаунт не потрібен — в мережу виходять лише необовʼязкові AI-функції, за твоєї згоди."
     ],
     [
       "На яких платформах доступний Fitence?",
@@ -627,7 +627,7 @@ export const faq = {
   "fr": [
     [
       "Fitence est-il gratuit ?",
-      "Oui. Fitence est gratuit à télécharger — planifiez vos séances, entraînez-vous en mode automatique et obtenez un retour IA, sans paywall."
+      "Oui. Fitence se télécharge et s'utilise gratuitement. En option : suppression des publicités par achat unique et abonnement Premium pour les fonctions IA."
     ],
     [
       "Faut-il un compte ?",
@@ -635,7 +635,7 @@ export const faq = {
     ],
     [
       "Fonctionne-t-il vraiment hors ligne ?",
-      "Oui. Toutes les fonctions essentielles marchent sans connexion. Vos données restent sur l'appareil et se synchronisent dès le retour en ligne."
+      "Oui. Toutes les fonctions essentielles marchent sans connexion. Vos données restent sur l'appareil et aucun compte n'est requis — seules les fonctions IA facultatives passent par internet, avec votre accord."
     ],
     [
       "Sur quelles plateformes est Fitence ?",
@@ -649,7 +649,7 @@ export const faq = {
   "de": [
     [
       "Ist Fitence kostenlos?",
-      "Ja. Fitence ist kostenlos — Trainings planen, auf Autopilot trainieren und KI-Feedback erhalten, ganz ohne Paywall."
+      "Ja. Fitence ist kostenlos herunterzuladen und zu nutzen. Optional: Werbung per Einmalkauf entfernen und Premium-Abo für die KI-Funktionen."
     ],
     [
       "Brauche ich ein Konto?",
@@ -657,7 +657,7 @@ export const faq = {
     ],
     [
       "Funktioniert es wirklich offline?",
-      "Ja. Alle Kernfunktionen laufen ohne Internet. Deine Daten bleiben auf dem Gerät und synchronisieren sich automatisch, sobald du wieder online bist."
+      "Ja. Alle Kernfunktionen laufen ohne Internet. Deine Daten bleiben auf dem Gerät, ein Konto ist nicht nötig — nur die optionalen KI-Funktionen gehen online, mit deiner Einwilligung."
     ],
     [
       "Auf welchen Plattformen gibt es Fitence?",
@@ -671,7 +671,7 @@ export const faq = {
   "es": [
     [
       "¿Fitence es gratis?",
-      "Sí. Fitence es gratis para descargar — planifica entrenamientos, entrena en piloto automático y recibe feedback de IA, sin muros de pago."
+      "Sí. Fitence es gratis para descargar y usar. Opcional: quitar anuncios con un pago único y suscripción Premium para las funciones de IA."
     ],
     [
       "¿Necesito una cuenta?",
@@ -679,7 +679,7 @@ export const faq = {
     ],
     [
       "¿Funciona de verdad sin conexión?",
-      "Sí. Todas las funciones esenciales funcionan sin internet. Tus datos se quedan en el dispositivo y se sincronizan al volver a estar en línea."
+      "Sí. Todas las funciones esenciales funcionan sin internet. Tus datos se quedan en el dispositivo y no hace falta cuenta — solo las funciones de IA opcionales usan internet, con tu consentimiento."
     ],
     [
       "¿En qué plataformas está Fitence?",
@@ -693,7 +693,7 @@ export const faq = {
   "it": [
     [
       "Fitence è gratis?",
-      "Sì. Fitence è gratis da scaricare — pianifica gli allenamenti, allenati in automatico e ricevi feedback IA, senza paywall."
+      "Sì. Fitence si scarica e si usa gratis. Opzionali: rimozione degli annunci con acquisto singolo e abbonamento Premium per le funzioni IA."
     ],
     [
       "Serve un account?",
@@ -701,7 +701,7 @@ export const faq = {
     ],
     [
       "Funziona davvero offline?",
-      "Sì. Tutte le funzioni principali funzionano senza internet. I tuoi dati restano sul dispositivo e si sincronizzano appena torni online."
+      "Sì. Tutte le funzioni principali funzionano senza internet. I tuoi dati restano sul dispositivo e non serve un account — solo le funzioni IA opzionali usano internet, con il tuo consenso."
     ],
     [
       "Su quali piattaforme è Fitence?",
