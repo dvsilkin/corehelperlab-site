@@ -55,7 +55,8 @@ for (const l of LANGS) {
     const href = dec(m[1]);
     if (href.includes(PLAY) && !/[?&]referrer=/.test(href)) err(`${l}: Play link without referrer: ${href}`);
     if (href.includes(PLAY) && !href.includes(`utm_medium%3D${l}`)) err(`${l}: Play referrer has wrong utm_medium: ${href}`);
-    if (href.includes(APPLE) && !/[?&]ct=/.test(href)) warn(`${l}: App Store link without ct/pt (waits for ASO-24)`);
+    if (href.includes(APPLE) && !(/[?&]pt=\d+/.test(href) && /[?&]ct=(hero|footer)-/.test(href))) err(`${l}: App Store link without pt/ct: ${href}`);
+    if (href.includes(APPLE) && !href.includes(`ct=hero-${l}`) && !href.includes(`ct=footer-${l}`)) err(`${l}: App Store ct has wrong language: ${href}`);
   }
   if (/syncs? automatically|синхронизируются автоматически|синхронізуються автоматично|synchronisieren sich automatisch|se sincronizan automáticamente|se synchronisent automatiquement|si sincronizzano automaticamente/i.test(h))
     err(`${l}: promise of automatic sync is back`);

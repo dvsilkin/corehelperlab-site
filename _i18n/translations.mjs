@@ -43,7 +43,8 @@ export const config = {
   },
   "appStore": {
     "url": "https://apps.apple.com/us/app/fitence-workout-planner-log/id6769868181",
-    "available": true
+    "available": true,
+    "providerToken": "128888408"
   }
 };
 
