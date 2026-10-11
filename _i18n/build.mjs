@@ -62,8 +62,8 @@ function jsonLd(lang) {
         applicationCategory: 'HealthApplication',
         url: urlFor(lang),
         inLanguage: htmlLang[lang],
-        image: 'https://corehelperlab.com/fitence-workout/og-image.jpg',
-        screenshot: ['rest_timer', 'progress', 'library_programs', 'ai_program', 'period_review'].map(
+        image: 'https://corehelperlab.com/fitence-workout/og-image-v2.jpg',
+        screenshot: ['work_timer', 'progress', 'library_programs', 'ai_program', 'period_review'].map(
           (f) => `https://corehelperlab.com/fitence-workout/screens/en/${f}.jpg`
         ),
         description: meta[lang].desc,
@@ -101,7 +101,7 @@ ${hreflangBlock()}
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Preload hero LCP image -->
-  <link rel="preload" as="image" href="${asset}screens/en/rest_timer.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="${asset}screens/en/work_timer.jpg" fetchpriority="high">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -109,10 +109,10 @@ ${hreflangBlock()}
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${desc}">
   <meta property="og:url" content="${canonical}">
-  <meta property="og:image" content="https://corehelperlab.com/fitence-workout/og-image.jpg">
+  <meta property="og:image" content="https://corehelperlab.com/fitence-workout/og-image-v2.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Fitence — offline gym &amp; HIIT workout tracker for iOS and Android">
+  <meta property="og:image:alt" content="Fitence — offline gym log with workout timer, ready-made programs and AI coach for iOS and Android">
   <meta property="og:locale" content="${ogLocale[lang]}">
 ${ogLocaleAlternates(lang)}
 
@@ -120,8 +120,8 @@ ${ogLocaleAlternates(lang)}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${desc}">
-  <meta name="twitter:image" content="https://corehelperlab.com/fitence-workout/og-image.jpg">
-  <meta name="twitter:image:alt" content="Fitence workout tracker">
+  <meta name="twitter:image" content="https://corehelperlab.com/fitence-workout/og-image-v2.jpg">
+  <meta name="twitter:image:alt" content="Fitence — offline gym log with workout timer and AI coach">
 
   <!-- Structured data -->
   <script type="application/ld+json">

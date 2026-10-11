@@ -28,6 +28,9 @@ for (const l of LANGS) {
   if (!title) err(`${l}: no <title>`); else if ([...title].length > TITLE_MAX) overs('title', [...title].length, TITLE_MAX);
   if (!desc) err(`${l}: no meta description`); else if ([...desc].length > DESC_MAX) overs('description', [...desc].length, DESC_MAX);
 
+  for (const m of h.matchAll(/<meta (?:property="og:image"|name="twitter:image") content="([^"]+)"/g)) {
+    if (!existsSync(m[1].replace(BASE + '/', ''))) err(`${l}: og/twitter image missing on disk: ${m[1]}`);
+  }
   const canon = (h.match(/<link rel="canonical" href="(.*?)"/) || [])[1];
   if (canon !== url(l)) err(`${l}: canonical ${canon} != ${url(l)}`);
 
