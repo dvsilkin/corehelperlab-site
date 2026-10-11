@@ -63,6 +63,9 @@ function jsonLd(lang) {
         url: urlFor(lang),
         inLanguage: htmlLang[lang],
         image: 'https://corehelperlab.com/fitence-workout/og-image.jpg',
+        screenshot: ['rest_timer', 'progress', 'library_programs', 'ai_program', 'period_review'].map(
+          (f) => `https://corehelperlab.com/fitence-workout/screens/en/${f}.jpg`
+        ),
         description: meta[lang].desc,
         installUrl: 'https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout',
         downloadUrl: 'https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout',
@@ -98,7 +101,7 @@ ${hreflangBlock()}
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Preload hero LCP image -->
-  <link rel="preload" as="image" href="${asset}screens/${lang}/active_workout_work.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="${asset}screens/en/rest_timer.jpg" fetchpriority="high">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">

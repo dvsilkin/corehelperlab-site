@@ -54,28 +54,28 @@ export const meta = {
     "desc": "Offline gym log with rest timer, audio cues and an AI coach. Build your program or start from a ready-made one. No account needed."
   },
   "ru": {
-    "title": "Fitence — офлайн-трекер тренировок для зала и HIIT (iOS, Android)",
-    "desc": "Fitence — офлайн-трекер силовых и HIIT-тренировок. Планируй тренировки, тренируйся на автопилоте со звуковыми сигналами и получай AI-разбор после каждой сессии. Без аккаунта и интернета. Бесплатно для iOS и Android."
+    "title": "Fitence — офлайн-журнал тренировок и таймер отдыха",
+    "desc": "Офлайн-журнал тренировок с таймером отдыха, звуковыми сигналами и AI-тренером. Свой план или готовая программа. Без аккаунта."
   },
   "ua": {
-    "title": "Fitence — офлайн-трекер тренувань для залу та HIIT (iOS, Android)",
-    "desc": "Fitence — офлайн-трекер силових та HIIT-тренувань. Плануй тренування, тренуйся на автопілоті зі звуковими сигналами та отримуй AI-аналіз після кожної сесії. Без облікового запису та інтернету. Безкоштовно для iOS та Android."
+    "title": "Fitence — офлайн-журнал тренувань і таймер відпочинку",
+    "desc": "Офлайн-журнал тренувань із таймером відпочинку, звуковими сигналами та AI-тренером. Свій план або готова програма. Без облікового запису."
   },
   "fr": {
-    "title": "Fitence — Suivi d'entraînement gym & HIIT hors ligne (iOS, Android)",
-    "desc": "Fitence est un tracker d'entraînement hors ligne pour la force et le HIIT. Planifiez, entraînez-vous en mode automatique avec signaux audio et recevez un retour IA après chaque séance. Sans compte ni internet. Gratuit sur iOS et Android."
+    "title": "Fitence — Suivi de séances hors ligne & minuteur de repos",
+    "desc": "Suivi de séances hors ligne avec minuteur de repos, signaux audio et coach IA. Votre programme ou un programme prêt. Sans compte."
   },
   "de": {
-    "title": "Fitence — Offline Gym- & HIIT-Trainings-Tracker (iOS, Android)",
-    "desc": "Fitence ist ein Offline-Trainings-Tracker für Kraft und HIIT. Trainings planen, auf Autopilot mit Audiosignalen trainieren und nach jeder Einheit KI-Feedback erhalten. Kein Konto, kein Internet nötig. Kostenlos für iOS und Android."
+    "title": "Fitence — Offline-Trainingslog & Pausentimer (iOS, Android)",
+    "desc": "Offline-Trainingslog mit Pausentimer, Audiosignalen und KI-Coach. Eigenes Programm oder fertig übernehmen. Kein Konto nötig."
   },
   "es": {
-    "title": "Fitence — Registro de entrenos de gimnasio y HIIT sin conexión",
-    "desc": "Fitence es un tracker de entrenamientos sin conexión para fuerza y HIIT. Planifica, entrena en piloto automático con señales de audio y recibe feedback de IA tras cada sesión. Sin cuenta ni internet. Gratis en iOS y Android."
+    "title": "Fitence — Registro de entrenos y temporizador sin conexión",
+    "desc": "Registro de entrenos sin conexión con temporizador de descanso, señales de audio y coach de IA. Crea tu programa o usa uno listo. Sin cuenta."
   },
   "it": {
-    "title": "Fitence — Tracker allenamenti palestra e HIIT offline (iOS, Android)",
-    "desc": "Fitence è un tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio e ricevi feedback IA dopo ogni sessione. Senza account né internet. Gratis su iOS e Android."
+    "title": "Fitence — Registro allenamenti offline e timer di recupero",
+    "desc": "Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Crea il tuo programma o parti da uno pronto. Senza account."
   }
 };
 
@@ -97,12 +97,12 @@ export const translations = {
     "f1.body": "Timers count down, audio cues fire at the right moment, screen stays readable from 2 m away. Phone on the floor — you're still in control.",
     "f2.title": "Flexible builder",
     "f2.body": "Strength, HIIT, circuits. Exercises, sets, reps, rest timers and technique notes — or start from a ready-made program for your gear.",
-    "f3.title": "AI analysis",
-    "f3.body": "After every session Fitence gives 2–3 concrete recommendations: load, technique, recovery.",
+    "f3.title": "AI coach",
+    "f3.body": "A starter program built around your gear and level, 2–3 recommendations after every session, and a review of recent weeks with advice you can apply in one tap.",
     "f4.title": "Offline first",
     "f4.body": "Train anywhere — no Wi-Fi, no cellular. Everything you need for the session is already on your phone.",
-    "f5.title": "No account needed",
-    "f5.body": "Start immediately. Export workouts to a file, restore on any device at any time.",
+    "f5.title": "Progress you can see",
+    "f5.body": "Consistency, workout calendar, personal records, milestones and a next step for every lift.",
     "f6.title": "Built for the gym",
     "f6.body": "High-contrast typography, large tap targets. Every number readable mid-set.",
     "ph.workouts": "Workouts screen",
@@ -119,7 +119,7 @@ export const translations = {
     "scr.ph": "Replace with screenshot",
     "ai.badge": "AI-powered",
     "ai.title": "Your personal<br>performance<br><em style=\"color:var(--acc2)\">coach</em>",
-    "ai.sub": "After every session, Fitence delivers 2–3 specific, actionable recommendations — not generic advice.",
+    "ai.sub": "After every session, Fitence delivers 2–3 specific recommendations — and reviews your recent weeks with changes you can apply in one tap.",
     "ai.card.title": "Fitence AI Analysis",
     "ai.card.sub": "Session complete · 3 recommendations",
     "ai.rec1": "Bench Press: rest-to-set ratio is optimal. Consider increasing load by 2.5 kg next session.",
@@ -151,7 +151,7 @@ export const translations = {
   "ru": {
     "hero.label": "Приложение для тренировок iOS и Android",
     "hero.title": "Тренируйся, не<br>думая об <em>приложении</em>",
-    "hero.sub": "Планируй тренировки, работай на автопилоте, получай AI-разбор. Без интернета.",
+    "hero.sub": "Офлайн-журнал тренировок с таймером отдыха, звуковыми сигналами и AI-тренером. Свой план или готовая программа.",
     "btn.appstore.sub": "Скачать в",
     "btn.gplay.sub": "Доступно в",
     "stat.offline": "Работает офлайн",
@@ -164,13 +164,13 @@ export const translations = {
     "f1.title": "Режим автопилота",
     "f1.body": "Таймеры отсчитывают время, звуковые сигналы срабатывают в нужный момент, экран читается с двух метров. Телефон на полу — всё под контролем.",
     "f2.title": "Гибкий конструктор",
-    "f2.body": "Силовые, HIIT, круговые. Упражнения, подходы, повторения, отдых и подсказки по технике — всё в одном месте.",
-    "f3.title": "AI-анализ",
-    "f3.body": "После каждой тренировки Fitence даёт 2–3 конкретные рекомендации: нагрузка, техника, восстановление.",
+    "f2.body": "Силовые, HIIT, круговые. Упражнения, подходы, повторения, таймеры отдыха и заметки по технике — или начни с готовой программы под своё оборудование.",
+    "f3.title": "AI-тренер",
+    "f3.body": "Стартовая программа под твоё оборудование и уровень, 2–3 рекомендации после каждой тренировки и разбор последних недель с советами, которые применяются одним нажатием.",
     "f4.title": "Сначала офлайн",
     "f4.body": "Тренируйся где угодно — без Wi-Fi и мобильной сети. Всё нужное для тренировки уже на устройстве.",
-    "f5.title": "Без аккаунта",
-    "f5.body": "Начни сразу. Экспортируй тренировки в файл, восстанови на любом устройстве в любое время.",
+    "f5.title": "Прогресс на виду",
+    "f5.body": "Регулярность, календарь тренировок, личные рекорды, вехи и «следующий шаг» для каждого упражнения.",
     "f6.title": "Создан для зала",
     "f6.body": "Контрастная типографика, крупные элементы. Каждая цифра читается в середине подхода.",
     "ph.workouts": "Список тренировок",
@@ -187,7 +187,7 @@ export const translations = {
     "scr.ph": "Замените скриншотом",
     "ai.badge": "AI-анализ",
     "ai.title": "Твой персональный<br>тренер по<br><em style=\"color:var(--acc2)\">результатам</em>",
-    "ai.sub": "После каждой сессии Fitence даёт 2–3 конкретные, применимые рекомендации — не общие советы.",
+    "ai.sub": "После каждой тренировки Fitence даёт 2–3 конкретные рекомендации — и разбирает последние недели с изменениями, которые применяются одним нажатием.",
     "ai.card.title": "AI-анализ Fitence",
     "ai.card.sub": "Тренировка завершена · 3 рекомендации",
     "ai.rec1": "Жим лёжа: соотношение отдыха и подхода оптимальное. Попробуй увеличить вес на 2,5 кг на следующей сессии.",
@@ -219,7 +219,7 @@ export const translations = {
   "fr": {
     "hero.label": "Application d'entraînement pour iOS et Android",
     "hero.title": "Entraînez-vous sans<br><em>penser</em> à<br>l'application",
-    "hero.sub": "Planifiez vos séances, entraînez-vous en mode automatique, obtenez un retour IA. Sans internet.",
+    "hero.sub": "Suivi de séances hors ligne avec minuteur de repos, signaux audio et coach IA. Votre programme ou un programme prêt.",
     "btn.appstore.sub": "Télécharger sur",
     "btn.gplay.sub": "Disponible sur",
     "stat.offline": "Fonctionne hors ligne",
@@ -232,13 +232,13 @@ export const translations = {
     "f1.title": "Mode automatique",
     "f1.body": "Les minuteries décomptent, les signaux audio se déclenchent au bon moment, l'écran reste lisible à 2 m. Téléphone au sol — vous gardez le contrôle.",
     "f2.title": "Constructeur flexible",
-    "f2.body": "Force, HIIT, circuits. Exercices, séries, répétitions, minuteries de repos et notes de technique — tout en un.",
-    "f3.title": "Analyse IA",
-    "f3.body": "Après chaque séance, Fitence donne 2–3 recommandations concrètes : charge, technique, récupération.",
+    "f2.body": "Force, HIIT, circuits. Exercices, séries, répétitions, minuteries de repos et notes techniques — ou partez d'un programme prêt pour votre matériel.",
+    "f3.title": "Coach IA",
+    "f3.body": "Un programme de départ selon votre matériel et votre niveau, 2–3 recommandations après chaque séance et un bilan des dernières semaines avec des conseils applicables d'une touche.",
     "f4.title": "Hors ligne en priorité",
     "f4.body": "Entraînez-vous partout — sans Wi-Fi, sans réseau. Tout ce qu'il faut pour la séance est déjà sur l'appareil.",
-    "f5.title": "Sans compte",
-    "f5.body": "Commencez immédiatement. Exportez les séances dans un fichier, restaurez sur n'importe quel appareil.",
+    "f5.title": "Vos progrès en un coup d'œil",
+    "f5.body": "Régularité, calendrier des séances, records personnels, jalons et une prochaine étape pour chaque exercice.",
     "f6.title": "Fait pour la salle",
     "f6.body": "Typographie à fort contraste, grandes zones tactiles. Chaque chiffre lisible en plein effort.",
     "ph.workouts": "Écran des séances",
@@ -255,7 +255,7 @@ export const translations = {
     "scr.ph": "Remplacer par une capture",
     "ai.badge": "Propulsé par l'IA",
     "ai.title": "Votre coach<br>personnel de<br><em style=\"color:var(--acc2)\">performance</em>",
-    "ai.sub": "Après chaque séance, Fitence fournit 2–3 recommandations spécifiques et actionnables — pas de conseils génériques.",
+    "ai.sub": "Après chaque séance, Fitence donne 2–3 recommandations concrètes — et fait le bilan de vos dernières semaines avec des changements applicables d'une touche.",
     "ai.card.title": "Analyse IA Fitence",
     "ai.card.sub": "Séance terminée · 3 recommandations",
     "ai.rec1": "Développé couché : rapport repos/série optimal. Envisagez d'augmenter la charge de 2,5 kg à la prochaine séance.",
@@ -287,7 +287,7 @@ export const translations = {
   "de": {
     "hero.label": "Trainings-App für iOS und Android",
     "hero.title": "Trainiere, ohne<br>an die App zu<br><em>denken</em>",
-    "hero.sub": "Trainings planen, auf Autopilot trainieren, KI-Feedback erhalten. Kein Internet nötig.",
+    "hero.sub": "Offline-Trainingslog mit Pausentimer, Audiosignalen und KI-Coach. Eigenes Programm oder ein fertiges übernehmen.",
     "btn.appstore.sub": "Laden im",
     "btn.gplay.sub": "Jetzt bei",
     "stat.offline": "Offline nutzbar",
@@ -300,13 +300,13 @@ export const translations = {
     "f1.title": "Autopilot-Modus",
     "f1.body": "Timer laufen rückwärts, Audiosignale ertönen im richtigen Moment, der Bildschirm bleibt aus 2 m Entfernung lesbar. Handy auf dem Boden — du behältst die Kontrolle.",
     "f2.title": "Flexibler Baukasten",
-    "f2.body": "Kraft, HIIT, Circuits. Übungen, Sätze, Wiederholungen, Pausentimer und Technikhinweise — alles an einem Ort.",
-    "f3.title": "KI-Analyse",
-    "f3.body": "Nach jeder Einheit gibt Fitence 2–3 konkrete Empfehlungen: Belastung, Technik, Erholung.",
+    "f2.body": "Kraft, HIIT, Circuits. Übungen, Sätze, Wiederholungen, Pausentimer und Technikhinweise — oder starte mit einem fertigen Programm für deine Ausstattung.",
+    "f3.title": "KI-Coach",
+    "f3.body": "Ein Startprogramm für deine Ausstattung und dein Niveau, 2–3 Empfehlungen nach jeder Einheit und ein Rückblick auf die letzten Wochen mit Tipps, die du mit einem Tipp übernimmst.",
     "f4.title": "Offline-First",
     "f4.body": "Trainiere überall — kein WLAN, kein Mobilnetz. Alles für dein Training liegt bereits auf dem Gerät.",
-    "f5.title": "Kein Konto nötig",
-    "f5.body": "Sofort loslegen. Trainings in eine Datei exportieren, auf jedem Gerät wiederherstellen.",
+    "f5.title": "Fortschritt im Blick",
+    "f5.body": "Regelmäßigkeit, Trainingskalender, persönliche Bestleistungen, Meilensteine und ein nächster Schritt für jede Übung.",
     "f6.title": "Fürs Fitnessstudio gebaut",
     "f6.body": "Kontrastreiche Typografie, große Tippziele. Jede Zahl mitten im Satz lesbar.",
     "ph.workouts": "Trainingsübersicht",
@@ -323,7 +323,7 @@ export const translations = {
     "scr.ph": "Durch Screenshot ersetzen",
     "ai.badge": "KI-gestützt",
     "ai.title": "Dein persönlicher<br>Performance-<br><em style=\"color:var(--acc2)\">Coach</em>",
-    "ai.sub": "Nach jeder Einheit liefert Fitence 2–3 spezifische, umsetzbare Empfehlungen — keine Allgemeinplätze.",
+    "ai.sub": "Nach jeder Einheit gibt Fitence 2–3 konkrete Empfehlungen — und wertet deine letzten Wochen aus, mit Änderungen, die du mit einem Tipp übernimmst.",
     "ai.card.title": "Fitence KI-Analyse",
     "ai.card.sub": "Training abgeschlossen · 3 Empfehlungen",
     "ai.rec1": "Bankdrücken: Ruhe-zu-Satz-Verhältnis ist optimal. Erwäge nächste Einheit das Gewicht um 2,5 kg zu erhöhen.",
@@ -355,7 +355,7 @@ export const translations = {
   "es": {
     "hero.label": "App de entrenamiento para iOS y Android",
     "hero.title": "Entrena sin<br><em>pensar</em> en<br>la app",
-    "hero.sub": "Planifica entrenamientos, entrena en piloto automático, recibe feedback de IA. Sin internet.",
+    "hero.sub": "Registro de entrenos sin conexión con temporizador de descanso, señales de audio y coach de IA. Tu programa o uno ya hecho.",
     "btn.appstore.sub": "Descargar en",
     "btn.gplay.sub": "Disponible en",
     "stat.offline": "Funciona sin conexión",
@@ -368,13 +368,13 @@ export const translations = {
     "f1.title": "Modo piloto automático",
     "f1.body": "Los temporizadores cuentan atrás, las señales de audio suenan en el momento justo, la pantalla se lee a 2 m. Teléfono en el suelo — sigues en control.",
     "f2.title": "Constructor flexible",
-    "f2.body": "Fuerza, HIIT, circuitos. Ejercicios, series, repeticiones, temporizadores de descanso y notas de técnica — todo en un lugar.",
-    "f3.title": "Análisis IA",
-    "f3.body": "Después de cada sesión Fitence da 2–3 recomendaciones concretas: carga, técnica, recuperación.",
+    "f2.body": "Fuerza, HIIT, circuitos. Ejercicios, series, repeticiones, temporizadores de descanso y notas de técnica — o empieza con un programa listo para tu material.",
+    "f3.title": "Coach de IA",
+    "f3.body": "Un programa inicial según tu material y nivel, 2–3 recomendaciones tras cada sesión y un repaso de las últimas semanas con consejos que aplicas con un toque.",
     "f4.title": "Sin conexión primero",
     "f4.body": "Entrena donde sea — sin Wi-Fi, sin datos. Todo lo necesario para tu sesión ya está en el dispositivo.",
-    "f5.title": "Sin cuenta",
-    "f5.body": "Empieza de inmediato. Exporta entrenamientos a un archivo, restáuralos en cualquier dispositivo.",
+    "f5.title": "Tu progreso a la vista",
+    "f5.body": "Constancia, calendario de entrenos, récords personales, hitos y un siguiente paso para cada ejercicio.",
     "f6.title": "Hecho para el gimnasio",
     "f6.body": "Tipografía de alto contraste, objetivos táctiles grandes. Cada número legible a mitad de serie.",
     "ph.workouts": "Pantalla de entrenamientos",
@@ -391,7 +391,7 @@ export const translations = {
     "scr.ph": "Reemplazar con captura",
     "ai.badge": "Impulsado por IA",
     "ai.title": "Tu entrenador<br>personal de<br><em style=\"color:var(--acc2)\">rendimiento</em>",
-    "ai.sub": "Después de cada sesión, Fitence entrega 2–3 recomendaciones específicas y accionables — no consejos genéricos.",
+    "ai.sub": "Tras cada sesión, Fitence te da 2–3 recomendaciones concretas — y repasa tus últimas semanas con cambios que aplicas con un toque.",
     "ai.card.title": "Análisis IA de Fitence",
     "ai.card.sub": "Sesión completada · 3 recomendaciones",
     "ai.rec1": "Press de banca: relación descanso-serie óptima. Considera aumentar la carga 2,5 kg en la próxima sesión.",
@@ -423,7 +423,7 @@ export const translations = {
   "it": {
     "hero.label": "App di allenamento per iOS e Android",
     "hero.title": "Allenati senza<br><em>pensare</em> all'app",
-    "hero.sub": "Pianifica gli allenamenti, allenati in automatico, ricevi feedback dall'IA. Senza internet.",
+    "hero.sub": "Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Il tuo programma o uno già pronto.",
     "btn.appstore.sub": "Scarica su",
     "btn.gplay.sub": "Disponibile su",
     "stat.offline": "Funziona offline",
@@ -436,13 +436,13 @@ export const translations = {
     "f1.title": "Modalità automatica",
     "f1.body": "I timer contano alla rovescia, i segnali audio scattano al momento giusto, lo schermo resta leggibile a 2 m. Telefono a terra — sei sempre in controllo.",
     "f2.title": "Builder flessibile",
-    "f2.body": "Forza, HIIT, circuiti. Esercizi, serie, ripetizioni, timer di recupero e note sulla tecnica — tutto in un posto.",
-    "f3.title": "Analisi IA",
-    "f3.body": "Dopo ogni sessione Fitence dà 2–3 raccomandazioni concrete: carico, tecnica, recupero.",
+    "f2.body": "Forza, HIIT, circuit. Esercizi, serie, ripetizioni, timer di recupero e note sulla tecnica — oppure parti da un programma pronto per la tua attrezzatura.",
+    "f3.title": "Coach IA",
+    "f3.body": "Un programma iniziale in base a attrezzatura e livello, 2–3 raccomandazioni dopo ogni sessione e una revisione delle ultime settimane con consigli da applicare con un tocco.",
     "f4.title": "Offline prima di tutto",
     "f4.body": "Allenati ovunque — senza Wi-Fi, senza rete. Tutto il necessario per l'allenamento è già sul dispositivo.",
-    "f5.title": "Senza account",
-    "f5.body": "Inizia subito. Esporta gli allenamenti in un file, ripristina su qualsiasi dispositivo.",
+    "f5.title": "I progressi sotto controllo",
+    "f5.body": "Regolarità, calendario degli allenamenti, record personali, traguardi e un prossimo passo per ogni esercizio.",
     "f6.title": "Fatto per la palestra",
     "f6.body": "Tipografia ad alto contrasto, grandi aree di tocco. Ogni numero leggibile a metà serie.",
     "ph.workouts": "Schermata allenamenti",
@@ -459,7 +459,7 @@ export const translations = {
     "scr.ph": "Sostituire con screenshot",
     "ai.badge": "Basato sull'IA",
     "ai.title": "Il tuo coach<br>personale di<br><em style=\"color:var(--acc2)\">performance</em>",
-    "ai.sub": "Dopo ogni sessione, Fitence fornisce 2–3 raccomandazioni specifiche e praticabili — non consigli generici.",
+    "ai.sub": "Dopo ogni sessione Fitence dà 2–3 raccomandazioni concrete — e rivede le ultime settimane con modifiche da applicare con un tocco.",
     "ai.card.title": "Analisi IA Fitence",
     "ai.card.sub": "Sessione completata · 3 raccomandazioni",
     "ai.rec1": "Panca piana: rapporto riposo-serie ottimale. Considera di aumentare il carico di 2,5 kg alla prossima sessione.",
@@ -491,7 +491,7 @@ export const translations = {
   "ua": {
     "hero.label": "Застосунок для тренувань iOS і Android",
     "hero.title": "Тренуйся, не<br>думаючи про <em>застосунок</em>",
-    "hero.sub": "Плануй тренування, працюй на автопілоті, отримуй AI-аналіз. Без інтернету.",
+    "hero.sub": "Офлайн-журнал тренувань із таймером відпочинку, звуковими сигналами та AI-тренером. Свій план або готова програма.",
     "btn.appstore.sub": "Завантажити в",
     "btn.gplay.sub": "Доступно в",
     "stat.offline": "Працює офлайн",
@@ -504,13 +504,13 @@ export const translations = {
     "f1.title": "Режим автопілота",
     "f1.body": "Таймери відраховують час, звукові сигнали спрацьовують вчасно, екран читається з двох метрів. Телефон на підлозі — все під контролем.",
     "f2.title": "Гнучкий конструктор",
-    "f2.body": "Силові, HIIT, колові. Вправи, підходи, повторення, відпочинок і підказки з техніки — все в одному місці.",
-    "f3.title": "AI-аналіз",
-    "f3.body": "Після кожного тренування Fitence дає 2–3 конкретні рекомендації: навантаження, техніка, відновлення.",
+    "f2.body": "Силові, HIIT, колові. Вправи, підходи, повторення, таймери відпочинку та нотатки з техніки — або почни з готової програми під твоє обладнання.",
+    "f3.title": "AI-тренер",
+    "f3.body": "Стартова програма під твоє обладнання та рівень, 2–3 рекомендації після кожного тренування і розбір останніх тижнів із порадами, які застосовуються одним дотиком.",
     "f4.title": "Спочатку офлайн",
     "f4.body": "Тренуйся будь-де — без Wi-Fi і мобільної мережі. Усе потрібне для тренування вже на пристрої.",
-    "f5.title": "Без облікового запису",
-    "f5.body": "Починай одразу. Експортуй тренування у файл, відновлюй на будь-якому пристрої.",
+    "f5.title": "Прогрес на виду",
+    "f5.body": "Регулярність, календар тренувань, особисті рекорди, віхи та «наступний крок» для кожної вправи.",
     "f6.title": "Створено для залу",
     "f6.body": "Контрастна типографіка, великі елементи. Кожна цифра читається в середині підходу.",
     "ph.workouts": "Список тренувань",
@@ -527,7 +527,7 @@ export const translations = {
     "scr.ph": "Замініть скриншотом",
     "ai.badge": "AI-аналіз",
     "ai.title": "Твій персональний<br>тренер за<br><em style=\"color:var(--acc2)\">результатами</em>",
-    "ai.sub": "Після кожної сесії Fitence дає 2–3 конкретні, застосовні рекомендації — не загальні поради.",
+    "ai.sub": "Після кожного тренування Fitence дає 2–3 конкретні рекомендації — і розбирає останні тижні зі змінами, які застосовуються одним дотиком.",
     "ai.card.title": "AI-аналіз Fitence",
     "ai.card.sub": "Тренування завершено · 3 рекомендації",
     "ai.rec1": "Жим лежачи: співвідношення відпочинку і підходу оптимальне. Спробуй збільшити вагу на 2,5 кг.",
@@ -578,7 +578,19 @@ export const faq = {
     ],
     [
       "What does the AI analysis do?",
-      "After each session Fitence reviews your performance and gives 2–3 concrete recommendations on load, technique and recovery — specific to your workout, not generic tips."
+      "After each session Fitence reviews your performance and gives 2–3 concrete recommendations on load, technique and recovery — specific to your workout, not generic tips. It can also review your last weeks and suggest changes to your program that you apply in one tap."
+    ],
+    [
+      "Are there ready-made programs?",
+      "Yes. The library has 34 ready-made programs and 250+ exercises. Import a program and edit it like your own, or build a workout from scratch."
+    ],
+    [
+      "Can Fitence build a program for me?",
+      "Yes. Answer a short questionnaire about your equipment, level and goal, and the AI coach builds a starter program from the exercise library. It is optional, and your data is sent only after you give consent."
+    ],
+    [
+      "Can I train without any equipment?",
+      "Yes. The library includes full-body programs that need no equipment, and the AI coach builds programs around the gear you actually have."
     ]
   ],
   "ru": [
@@ -600,7 +612,19 @@ export const faq = {
     ],
     [
       "Что делает AI-анализ?",
-      "После каждой тренировки Fitence разбирает результаты и даёт 2–3 конкретные рекомендации по нагрузке, технике и восстановлению — под вашу тренировку, а не общие советы."
+      "После каждой тренировки Fitence разбирает ваши результаты и даёт 2–3 конкретные рекомендации по нагрузке, технике и восстановлению — именно по вашей тренировке, а не общие советы. Он также может разобрать последние недели и предложить изменения в программе, которые применяются одним нажатием."
+    ],
+    [
+      "Есть ли готовые программы?",
+      "Да. В библиотеке 34 готовые программы и более 250 упражнений. Импортируйте программу и редактируйте как свою или стройте тренировку с нуля."
+    ],
+    [
+      "Может ли Fitence составить программу за меня?",
+      "Да. Ответьте на короткую анкету об оборудовании, уровне и цели — AI-тренер соберёт стартовую программу из библиотеки упражнений. Это необязательно, а данные отправляются только после вашего согласия."
+    ],
+    [
+      "Можно ли тренироваться без оборудования?",
+      "Да. В библиотеке есть программы на всё тело без оборудования, а AI-тренер строит программы под то оборудование, которое у вас действительно есть."
     ]
   ],
   "ua": [
@@ -622,7 +646,19 @@ export const faq = {
     ],
     [
       "Що робить AI-аналіз?",
-      "Після кожного тренування Fitence аналізує результати й дає 2–3 конкретні рекомендації щодо навантаження, техніки та відновлення — саме під ваше тренування."
+      "Після кожного тренування Fitence аналізує ваші результати й дає 2–3 конкретні рекомендації щодо навантаження, техніки та відновлення — саме для вашого тренування, а не загальні поради. Він також може розібрати останні тижні та запропонувати зміни в програмі, які застосовуються одним дотиком."
+    ],
+    [
+      "Чи є готові програми?",
+      "Так. У бібліотеці 34 готові програми та понад 250 вправ. Імпортуйте програму й редагуйте як свою або будуйте тренування з нуля."
+    ],
+    [
+      "Чи може Fitence скласти програму за мене?",
+      "Так. Дайте відповідь на коротку анкету про обладнання, рівень і ціль — AI-тренер збере стартову програму з бібліотеки вправ. Це необовʼязково, а дані надсилаються лише після вашої згоди."
+    ],
+    [
+      "Чи можна тренуватися без обладнання?",
+      "Так. У бібліотеці є програми на все тіло без обладнання, а AI-тренер будує програми під те обладнання, яке у вас справді є."
     ]
   ],
   "fr": [
@@ -644,7 +680,19 @@ export const faq = {
     ],
     [
       "Que fait l'analyse IA ?",
-      "Après chaque séance, Fitence analyse vos performances et donne 2–3 recommandations concrètes sur la charge, la technique et la récupération — adaptées à votre séance."
+      "Après chaque séance, Fitence analyse vos performances et vous donne 2–3 recommandations concrètes sur la charge, la technique et la récupération — propres à votre séance, pas des conseils génériques. Il peut aussi faire le bilan de vos dernières semaines et proposer des changements de programme applicables d'une touche."
+    ],
+    [
+      "Y a-t-il des programmes prêts à l'emploi ?",
+      "Oui. La bibliothèque propose 34 programmes prêts à l'emploi et plus de 250 exercices. Importez un programme et modifiez-le comme le vôtre, ou créez une séance de zéro."
+    ],
+    [
+      "Fitence peut-il créer un programme pour moi ?",
+      "Oui. Répondez à un court questionnaire sur votre matériel, votre niveau et votre objectif : le coach IA compose un programme de départ à partir de la bibliothèque d'exercices. C'est facultatif et vos données ne sont envoyées qu'avec votre consentement."
+    ],
+    [
+      "Puis-je m'entraîner sans matériel ?",
+      "Oui. La bibliothèque comprend des programmes full body sans matériel, et le coach IA construit des programmes avec le matériel dont vous disposez réellement."
     ]
   ],
   "de": [
@@ -666,7 +714,19 @@ export const faq = {
     ],
     [
       "Was macht die KI-Analyse?",
-      "Nach jeder Einheit wertet Fitence deine Leistung aus und gibt 2–3 konkrete Empfehlungen zu Belastung, Technik und Erholung – passend zu deinem Training."
+      "Nach jeder Einheit wertet Fitence deine Leistung aus und gibt dir 2–3 konkrete Empfehlungen zu Belastung, Technik und Regeneration — passend zu deinem Training, keine Standardtipps. Außerdem kann es deine letzten Wochen auswerten und Änderungen an deinem Programm vorschlagen, die du mit einem Tipp übernimmst."
+    ],
+    [
+      "Gibt es fertige Programme?",
+      "Ja. Die Bibliothek enthält 34 fertige Programme und über 250 Übungen. Übernimm ein Programm und bearbeite es wie dein eigenes – oder baue ein Training von Grund auf."
+    ],
+    [
+      "Kann Fitence ein Programm für mich erstellen?",
+      "Ja. Beantworte einen kurzen Fragebogen zu Ausstattung, Niveau und Ziel, und der KI-Coach erstellt aus der Übungsbibliothek ein Startprogramm. Das ist optional, und deine Daten werden erst nach deiner Einwilligung gesendet."
+    ],
+    [
+      "Kann ich ohne Geräte trainieren?",
+      "Ja. Die Bibliothek enthält Ganzkörperprogramme ohne Geräte, und der KI-Coach plant mit der Ausstattung, die du wirklich hast."
     ]
   ],
   "es": [
@@ -688,7 +748,19 @@ export const faq = {
     ],
     [
       "¿Qué hace el análisis con IA?",
-      "Tras cada sesión, Fitence revisa tu rendimiento y da 2–3 recomendaciones concretas sobre carga, técnica y recuperación — específicas para tu entrenamiento."
+      "Tras cada sesión, Fitence analiza tu rendimiento y te da 2–3 recomendaciones concretas sobre carga, técnica y recuperación — específicas para tu entrenamiento, no consejos genéricos. También puede repasar tus últimas semanas y proponer cambios en tu programa que aplicas con un toque."
+    ],
+    [
+      "¿Hay programas ya hechos?",
+      "Sí. La biblioteca tiene 34 programas listos y más de 250 ejercicios. Importa un programa y edítalo como si fuera tuyo, o crea un entrenamiento desde cero."
+    ],
+    [
+      "¿Puede Fitence crear un programa por mí?",
+      "Sí. Responde un breve cuestionario sobre tu material, nivel y objetivo y el coach de IA crea un programa inicial con la biblioteca de ejercicios. Es opcional y tus datos solo se envían después de que des tu consentimiento."
+    ],
+    [
+      "¿Puedo entrenar sin material?",
+      "Sí. La biblioteca incluye programas de cuerpo completo sin material, y el coach de IA crea programas con el equipamiento que realmente tienes."
     ]
   ],
   "it": [
@@ -710,7 +782,19 @@ export const faq = {
     ],
     [
       "Cosa fa l'analisi IA?",
-      "Dopo ogni sessione Fitence analizza la tua performance e dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento."
+      "Dopo ogni sessione Fitence analizza le tue prestazioni e ti dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento, non consigli generici. Può anche rivedere le ultime settimane e proporre modifiche al programma da applicare con un tocco."
+    ],
+    [
+      "Ci sono programmi già pronti?",
+      "Sì. La libreria offre 34 programmi pronti e oltre 250 esercizi. Importa un programma e modificalo come se fosse tuo, oppure crea un allenamento da zero."
+    ],
+    [
+      "Fitence può creare un programma per me?",
+      "Sì. Rispondi a un breve questionario su attrezzatura, livello e obiettivo e il coach IA crea un programma iniziale dalla libreria di esercizi. È facoltativo e i tuoi dati vengono inviati solo dopo il tuo consenso."
+    ],
+    [
+      "Posso allenarmi senza attrezzatura?",
+      "Sì. La libreria include programmi total body senza attrezzatura e il coach IA costruisce programmi con l'attrezzatura che hai davvero."
     ]
   ]
 };

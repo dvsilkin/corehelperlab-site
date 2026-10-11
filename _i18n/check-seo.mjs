@@ -42,6 +42,7 @@ for (const l of LANGS) {
       const g = j['@graph'] || [j];
       for (const n of g) if (!n['@type']) err(`${l}: ld+json node without @type`);
       for (const n of g) if (n['@type'] === 'MobileApplication' && !(n.name && n.url && n.offers)) err(`${l}: MobileApplication lacks name/url/offers`);
+      for (const n of g) for (const u of n.screenshot || []) if (!existsSync(u.replace(BASE + '/', ''))) err(`${l}: JSON-LD screenshot missing on disk: ${u}`);
       for (const n of g) if (n['@type'] === 'FAQPage' && !(n.mainEntity?.length)) err(`${l}: FAQPage empty`);
     } catch (e) { err(`${l}: ld+json does not parse (${e.message})`); }
   }
@@ -49,6 +50,11 @@ for (const l of LANGS) {
   for (const m of h.matchAll(/<img\b[^>]*>/g)) {
     const alt = (m[0].match(/\balt="([^"]*)"/) || [])[1];
     if (!alt || !alt.trim()) err(`${l}: <img> without alt: ${m[0].slice(0, 80)}`);
+    const src = (m[0].match(/\bsrc="([^"]*)"/) || [])[1];
+    if (src && !/^https?:/.test(src)) {
+      const path = (l === 'en' ? 'fitence-workout/' : 'fitence-workout/' + l + '/') + src;
+      if (!existsSync(path)) err(`${l}: <img> file missing on disk: ${src}`);
+    }
   }
 
   for (const m of h.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
