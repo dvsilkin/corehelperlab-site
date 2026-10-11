@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitence — Tracker allenamenti palestra e HIIT offline (iOS, Android)</title>
-  <meta name="description" content="Fitence è un tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio e ricevi feedback IA dopo ogni sessione. Senza account né internet. Gratis su iOS e Android.">
+  <title>Fitence — Registro allenamenti offline e timer di recupero</title>
+  <meta name="description" content="Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Crea il tuo programma o parti da uno pronto. Senza account.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0D0D16">
   <link rel="canonical" href="https://corehelperlab.com/fitence-workout/it/">
@@ -26,18 +26,18 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Preload hero LCP image -->
-  <link rel="preload" as="image" href="../screens/it/active_workout_work.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="../screens/en/work_timer.jpg" fetchpriority="high">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fitence">
-  <meta property="og:title" content="Fitence — Tracker allenamenti palestra e HIIT offline (iOS, Android)">
-  <meta property="og:description" content="Fitence è un tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio e ricevi feedback IA dopo ogni sessione. Senza account né internet. Gratis su iOS e Android.">
+  <meta property="og:title" content="Fitence — Registro allenamenti offline e timer di recupero">
+  <meta property="og:description" content="Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Crea il tuo programma o parti da uno pronto. Senza account.">
   <meta property="og:url" content="https://corehelperlab.com/fitence-workout/it/">
-  <meta property="og:image" content="https://corehelperlab.com/fitence-workout/og-image.jpg">
+  <meta property="og:image" content="https://corehelperlab.com/fitence-workout/og-image-v2.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Fitence — offline gym &amp; HIIT workout tracker for iOS and Android">
+  <meta property="og:image:alt" content="Fitence — offline gym log with workout timer, ready-made programs and AI coach for iOS and Android">
   <meta property="og:locale" content="it_IT">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="ru_RU">
@@ -48,10 +48,10 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fitence — Tracker allenamenti palestra e HIIT offline (iOS, Android)">
-  <meta name="twitter:description" content="Fitence è un tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio e ricevi feedback IA dopo ogni sessione. Senza account né internet. Gratis su iOS e Android.">
-  <meta name="twitter:image" content="https://corehelperlab.com/fitence-workout/og-image.jpg">
-  <meta name="twitter:image:alt" content="Fitence workout tracker">
+  <meta name="twitter:title" content="Fitence — Registro allenamenti offline e timer di recupero">
+  <meta name="twitter:description" content="Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Crea il tuo programma o parti da uno pronto. Senza account.">
+  <meta name="twitter:image" content="https://corehelperlab.com/fitence-workout/og-image-v2.jpg">
+  <meta name="twitter:image:alt" content="Fitence — offline gym log with workout timer and AI coach">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -73,8 +73,15 @@
       "applicationCategory": "HealthApplication",
       "url": "https://corehelperlab.com/fitence-workout/it/",
       "inLanguage": "it",
-      "image": "https://corehelperlab.com/fitence-workout/og-image.jpg",
-      "description": "Fitence è un tracker di allenamento offline per forza e HIIT. Pianifica, allenati in automatico con segnali audio e ricevi feedback IA dopo ogni sessione. Senza account né internet. Gratis su iOS e Android.",
+      "image": "https://corehelperlab.com/fitence-workout/og-image-v2.jpg",
+      "screenshot": [
+        "https://corehelperlab.com/fitence-workout/screens/en/work_timer.jpg",
+        "https://corehelperlab.com/fitence-workout/screens/en/progress.jpg",
+        "https://corehelperlab.com/fitence-workout/screens/en/library_programs.jpg",
+        "https://corehelperlab.com/fitence-workout/screens/en/ai_program.jpg",
+        "https://corehelperlab.com/fitence-workout/screens/en/period_review.jpg"
+      ],
+      "description": "Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Crea il tuo programma o parti da uno pronto. Senza account.",
       "installUrl": "https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout",
       "downloadUrl": "https://play.google.com/store/apps/details?id=com.corehelperlab.fitence.workout",
       "publisher": {
@@ -499,28 +506,28 @@
     }
 
     .screen-main {
-      width: 220px;
-      height: 460px;
+      width: 230px;
+      height: 409px;
       z-index: 3;
       transform: translateY(0) rotate(0deg);
     }
 
     .screen-left {
       width: 190px;
-      height: 400px;
+      height: 338px;
       z-index: 2;
-      left: 20px;
-      transform: translateY(20px) rotate(-6deg);
-      opacity: .75;
+      left: 0;
+      transform: translateY(16px) rotate(-5deg);
+      opacity: .92;
     }
 
     .screen-right {
       width: 190px;
-      height: 400px;
+      height: 338px;
       z-index: 2;
-      right: 20px;
-      transform: translateY(20px) rotate(6deg);
-      opacity: .75;
+      right: 0;
+      transform: translateY(16px) rotate(5deg);
+      opacity: .92;
     }
 
     .hero-screens:hover .screen-main {
@@ -718,7 +725,7 @@
 
     .screen-card {
       flex: 0 0 auto;
-      width: 210px;
+      width: 248px;
       height: 440px;
       border-radius: 28px;
       overflow: hidden;
@@ -1067,20 +1074,20 @@
       }
 
       .screen-main {
-        width: 160px;
-        height: 336px;
+        width: 150px;
+        height: 267px;
       }
 
       .screen-left {
-        width: 140px;
-        height: 294px;
-        left: 10px;
+        width: 125px;
+        height: 222px;
+        left: 0;
       }
 
       .screen-right {
-        width: 140px;
-        height: 294px;
-        right: 10px;
+        width: 125px;
+        height: 222px;
+        right: 0;
       }
 
       .stats-bar .container {
@@ -1344,7 +1351,7 @@
 
           <h1 data-i18n="hero.title">Allenati senza<br><em>pensare</em> all'app</h1>
 
-          <p class="hero-sub" data-i18n="hero.sub">Pianifica gli allenamenti, allenati in automatico, ricevi feedback dall'IA. Senza internet.</p>
+          <p class="hero-sub" data-i18n="hero.sub">Registro allenamenti offline con timer di recupero, segnali audio e coach IA. Il tuo programma o uno già pronto.</p>
 
           <div class="store-btns">
             <a href="https://apps.apple.com/us/app/fitence-workout-planner-log/id6769868181?pt=128888408&amp;ct=hero-it&amp;mt=8" class="store-btn">
@@ -1400,13 +1407,13 @@
 
         <div class="hero-screens">
           <div class="screen-mockup screen-left">
-            <img src="../screens/it/active_workout_prepare.jpg" data-screen="active_workout_prepare.jpg" alt="Fitence workout prepare screen with set countdown" width="190" height="400" decoding="async">
+            <img src="../screens/en/rest_timer.jpg" alt="Fitence rest timer counting down between sets, readable from across the room" width="190" height="338" decoding="async">
           </div>
           <div class="screen-mockup screen-main">
-            <img src="../screens/it/active_workout_work.jpg" data-screen="active_workout_work.jpg" alt="Fitence active workout screen showing the current exercise and timer" width="220" height="460" fetchpriority="high" decoding="async">
+            <img src="../screens/en/work_timer.jpg" alt="Fitence interval workout: work phase with a large countdown timer readable from across the room" width="230" height="409" fetchpriority="high" decoding="async">
           </div>
           <div class="screen-mockup screen-right">
-            <img src="../screens/it/active_workout_rest.jpg" data-screen="active_workout_rest.jpg" alt="Fitence rest timer between sets" width="190" height="400" decoding="async">
+            <img src="../screens/en/workout_done.jpg" alt="Fitence workout complete screen with results per exercise" width="190" height="338" decoding="async">
           </div>
         </div>
       </div>
@@ -1453,12 +1460,12 @@
         <div class="feat-card fade-in fade-in-d1">
           <div class="feat-icon">📋</div>
           <h3 data-i18n="f2.title">Builder flessibile</h3>
-          <p data-i18n="f2.body">Forza, HIIT, circuiti. Esercizi, serie, ripetizioni, timer di recupero e note sulla tecnica — tutto in un posto.</p>
+          <p data-i18n="f2.body">Forza, HIIT, circuit. Esercizi, serie, ripetizioni, timer di recupero e note sulla tecnica — oppure parti da un programma pronto per la tua attrezzatura.</p>
         </div>
         <div class="feat-card fade-in fade-in-d2">
           <div class="feat-icon">🧠</div>
-          <h3 data-i18n="f3.title">Analisi IA</h3>
-          <p data-i18n="f3.body">Dopo ogni sessione Fitence dà 2–3 raccomandazioni concrete: carico, tecnica, recupero.</p>
+          <h3 data-i18n="f3.title">Coach IA</h3>
+          <p data-i18n="f3.body">Un programma iniziale in base a attrezzatura e livello, 2–3 raccomandazioni dopo ogni sessione e una revisione delle ultime settimane con consigli da applicare con un tocco.</p>
         </div>
         <div class="feat-card fade-in fade-in-d3">
           <div class="feat-icon">✈️</div>
@@ -1467,8 +1474,8 @@
         </div>
         <div class="feat-card fade-in fade-in-d4">
           <div class="feat-icon">🔓</div>
-          <h3 data-i18n="f5.title">Senza account</h3>
-          <p data-i18n="f5.body">Inizia subito. Esporta gli allenamenti in un file, ripristina su qualsiasi dispositivo.</p>
+          <h3 data-i18n="f5.title">I progressi sotto controllo</h3>
+          <p data-i18n="f5.body">Regolarità, calendario degli allenamenti, record personali, traguardi e un prossimo passo per ogni esercizio.</p>
         </div>
         <div class="feat-card fade-in fade-in-d5">
           <div class="feat-icon">👁</div>
@@ -1488,19 +1495,19 @@
     </div>
     <div class="screens-row">
       <div class="screen-card fade-in">
-        <img src="../screens/it/dashboard.jpg" data-screen="dashboard.jpg" alt="Fitence dashboard with today's workout and activity" width="210" height="440" loading="lazy" decoding="async">
+        <img src="../screens/en/progress.jpg" alt="Fitence progress tab with training consistency, streaks and exercise progress" width="248" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d1">
-        <img src="../screens/it/workouts.jpg" data-screen="workouts.jpg" alt="Workout list in Fitence" width="210" height="440" loading="lazy" decoding="async">
+        <img src="../screens/en/library_programs.jpg" alt="Fitence library of ready-made workout programs by goal and level" width="248" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d2">
-        <img src="../screens/it/workout_detail.jpg" data-screen="workout_detail.jpg" alt="Workout detail with exercises, sets and reps" width="210" height="440" loading="lazy" decoding="async">
+        <img src="../screens/en/ai_program.jpg" alt="Fitence aI-built workout program split into days in the workouts list" width="248" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d3">
-        <img src="../screens/it/library_workouts.jpg" data-screen="library_workouts.jpg" alt="Workout library with ready-made programs" width="210" height="440" loading="lazy" decoding="async">
+        <img src="../screens/en/period_review.jpg" alt="Fitence aI review of recent weeks with recommendations you can apply in one tap" width="248" height="440" loading="lazy" decoding="async">
       </div>
       <div class="screen-card fade-in fade-in-d4">
-        <img src="../screens/it/profile.jpg" data-screen="profile.jpg" alt="Profile and training statistics" width="210" height="440" loading="lazy" decoding="async">
+        <img src="../screens/en/exercise_library.jpg" alt="Fitence exercise library with muscle groups and filters" width="248" height="440" loading="lazy" decoding="async">
       </div>
     </div>
     <p class="screens-caption" data-i18n="screens.caption">Scorri per vedere di più</p>
@@ -1514,7 +1521,7 @@
         <div>
           <div class="ai-badge">🧠 <span data-i18n="ai.badge">Basato sull'IA</span></div>
           <h2 class="section-title fade-in" data-i18n="ai.title">Il tuo coach<br>personale di<br><em style="color:var(--acc2)">performance</em></h2>
-          <p class="section-sub fade-in fade-in-d1" data-i18n="ai.sub">Dopo ogni sessione, Fitence fornisce 2–3 raccomandazioni specifiche e praticabili — non consigli generici.</p>
+          <p class="section-sub fade-in fade-in-d1" data-i18n="ai.sub">Dopo ogni sessione Fitence dà 2–3 raccomandazioni concrete — e rivede le ultime settimane con modifiche da applicare con un tocco.</p>
         </div>
 
         <div class="ai-card fade-in fade-in-d1">
@@ -1609,7 +1616,19 @@
         </details>
         <details class="faq-item">
           <summary>Cosa fa l'analisi IA?</summary>
-          <div class="faq-answer">Dopo ogni sessione Fitence analizza la tua performance e dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento.</div>
+          <div class="faq-answer">Dopo ogni sessione Fitence analizza le tue prestazioni e ti dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento, non consigli generici. Può anche rivedere le ultime settimane e proporre modifiche al programma da applicare con un tocco.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Ci sono programmi già pronti?</summary>
+          <div class="faq-answer">Sì. La libreria offre 34 programmi pronti e oltre 250 esercizi. Importa un programma e modificalo come se fosse tuo, oppure crea un allenamento da zero.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Fitence può creare un programma per me?</summary>
+          <div class="faq-answer">Sì. Rispondi a un breve questionario su attrezzatura, livello e obiettivo e il coach IA crea un programma iniziale dalla libreria di esercizi. È facoltativo e i tuoi dati vengono inviati solo dopo il tuo consenso.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Posso allenarmi senza attrezzatura?</summary>
+          <div class="faq-answer">Sì. La libreria include programmi total body senza attrezzatura e il coach IA costruisce programmi con l'attrezzatura che hai davvero.</div>
         </details>
       </div>
     </div>
@@ -1656,7 +1675,31 @@
       "name": "Cosa fa l'analisi IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dopo ogni sessione Fitence analizza la tua performance e dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento."
+        "text": "Dopo ogni sessione Fitence analizza le tue prestazioni e ti dà 2–3 raccomandazioni concrete su carico, tecnica e recupero — specifiche per il tuo allenamento, non consigli generici. Può anche rivedere le ultime settimane e proporre modifiche al programma da applicare con un tocco."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ci sono programmi già pronti?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. La libreria offre 34 programmi pronti e oltre 250 esercizi. Importa un programma e modificalo come se fosse tuo, oppure crea un allenamento da zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fitence può creare un programma per me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Rispondi a un breve questionario su attrezzatura, livello e obiettivo e il coach IA crea un programma iniziale dalla libreria di esercizi. È facoltativo e i tuoi dati vengono inviati solo dopo il tuo consenso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso allenarmi senza attrezzatura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. La libreria include programmi total body senza attrezzatura e il coach IA costruisce programmi con l'attrezzatura che hai davvero."
       }
     }
   ]

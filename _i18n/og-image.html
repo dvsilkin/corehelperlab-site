@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>og-image source</title>
+<!-- Source of fitence-workout/og-image-v2.jpg (1200×630). Render:
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+   --force-device-scale-factor=1 --window-size=1200,630 --screenshot=/tmp/og.png file://$PWD/_i18n/og-image.html
+  then: sips -s format jpeg -s formatOptions 85 /tmp/og.png --out fitence-workout/og-image-v2.jpg -->
+<style>
+  :root{--bg:#0D0D16;--acc:#FF4D1A;--acc2:#2ED8A8;--txt:#EEEEF5;--muted:#9A9AB5;--border:#252535}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:630px;overflow:hidden;background:var(--bg);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--txt)}
+  .bg{position:absolute;inset:0;background:
+     radial-gradient(ellipse 560px 420px at 8% 0%,rgba(255,77,26,.20),transparent 70%),
+     radial-gradient(ellipse 520px 420px at 100% 100%,rgba(46,216,168,.14),transparent 70%)}
+  .left{position:absolute;left:80px;top:78px;width:640px}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border:1px solid rgba(255,77,26,.45);background:rgba(255,77,26,.10);border-radius:999px;color:#FF7A52;font-weight:700;letter-spacing:.14em;font-size:18px;text-transform:uppercase}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--acc)}
+  .logo{margin-top:22px;font-size:104px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .logo b{color:var(--acc)}
+  h1{margin-top:20px;font-size:46px;line-height:1.14;font-weight:800;letter-spacing:-.01em}
+  .sub{margin-top:18px;font-size:27px;line-height:1.38;color:var(--muted)}
+  .chips{position:absolute;left:80px;top:520px;display:flex;gap:18px;color:var(--acc2);font-weight:700;font-size:21px;white-space:nowrap}
+  .phone{position:absolute;border-radius:38px;overflow:hidden;border:2px solid #2d2d40;background:#0d0d16;box-shadow:0 30px 70px rgba(0,0,0,.65)}
+  .phone img{display:block;width:100%;height:100%}
+  .p1{left:700px;top:62px;width:262px;height:466px;z-index:2}
+  .p2{left:872px;top:96px;width:262px;height:466px;z-index:1;opacity:1;transform:rotate(4deg)}
+</style></head><body>
+<div class="bg"></div>
+<div class="left">
+  <div class="badge"><span class="dot"></span>iOS &amp; Android · Offline</div>
+  <div class="logo"><b>Fit</b>ence</div>
+  <h1>Offline Gym Log<br>&amp; Workout Timer</h1>
+  <p class="sub">Ready-made programs. AI coach.<br>No account needed.</p>
+</div>
+<div class="chips"><span>✓ Works offline</span><span>✓ Ready-made programs</span><span>✓ AI coach</span></div>
+<div class="phone p2"><img src="../fitence-workout/screens/en/active_set.jpg"></div>
+<div class="phone p1"><img src="../fitence-workout/screens/en/work_timer.jpg"></div>
+</body></html>
