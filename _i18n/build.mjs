@@ -4,6 +4,7 @@
 //   Writes: fitence-workout/index.html            (en, x-default)
 //           fitence-workout/<lang>/index.html      (ru, ua, fr, de, es, it)
 //           sitemap.xml                            (with hreflang alternates)
+//           q/<code>/index.html                    (QR flyer redirects, see qr.mjs)
 //
 // This folder (_i18n/) is excluded from GitHub Pages output because its name
 // starts with "_" (Jekyll ignores underscore-prefixed paths).
@@ -12,6 +13,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { config, meta, translations, faq } from './translations.mjs';
+import { QR_CODES, qrPath, renderQrPage } from './qr.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -288,6 +290,14 @@ for (const lang of LANGS) {
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'index.html'), html);
   console.log(`✓ ${pathFor(lang)}index.html`);
+}
+
+// QR redirects: noindex, deliberately absent from sitemap.xml.
+for (const code of Object.keys(QR_CODES)) {
+  const outDir = join(ROOT, 'q', code);
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(join(outDir, 'index.html'), renderQrPage(code));
+  console.log(`✓ ${qrPath(code)}index.html`);
 }
 
 writeFileSync(join(ROOT, 'sitemap.xml'), buildSitemap());

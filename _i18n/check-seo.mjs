@@ -4,6 +4,7 @@
 // reciprocity, JSON-LD parses, img alt, store links carry attribution, sitemap == pages.
 import { readFileSync, existsSync } from 'node:fs';
 import { config } from './translations.mjs';
+import { QR_CODES, QR_COUNTER, qrPath } from './qr.mjs';
 
 const { BASE, LANGS } = config;
 const TITLE_MAX = 60, DESC_MAX = 160;
@@ -78,7 +79,25 @@ else {
   const sm = readFileSync('sitemap.xml', 'utf8');
   const locs = new Set([...sm.matchAll(/<url>\s*<loc>(.*?)<\/loc>/g)].map((m) => m[1]));
   for (const l of LANGS) if (!locs.has(url(l))) err(`sitemap lacks ${url(l)}`);
+  for (const loc of locs) if (loc.includes('/q/')) err(`sitemap has QR redirect ${loc}`);
   for (const loc of locs) if (loc.includes('/fitence-workout/') && !LANGS.some((l) => url(l) === loc) && !/(privacy|terms)\.html$/.test(loc)) err(`sitemap has unexpected ${loc}`);
+}
+
+// QR flyer redirects (ASO-50): noindex, every store link carries the code's own attribution,
+// the counter beacon is present. The printed URL is permanent — a page must never disappear.
+for (const code of Object.keys(QR_CODES)) {
+  const f = `q/${code}/index.html`;
+  if (!existsSync(f)) { err(`${qrPath(code)}: ${f} missing`); continue; }
+  const h = dec(readFileSync(f, 'utf8'));
+  if (!/<meta name="robots" content="noindex/.test(h)) err(`${qrPath(code)}: not noindex`);
+  if (!h.includes(`sendBeacon(${JSON.stringify(QR_COUNTER)}`)) err(`${qrPath(code)}: no scan counter beacon`);
+  if (!h.includes(`id: ${JSON.stringify(code)}`)) err(`${qrPath(code)}: beacon sends a different code`);
+  const links = [...h.matchAll(/https:\/\/(?:play\.google\.com|apps\.apple\.com)[^"'\s<]+/g)].map((m) => m[0]);
+  if (!links.some((u) => u.includes(PLAY)) || !links.some((u) => u.includes(APPLE))) err(`${qrPath(code)}: missing a store link`);
+  for (const u of links) {
+    if (u.includes(PLAY) && !u.endsWith(`&referrer=${encodeURIComponent(`utm_source=qr&utm_medium=flyer&utm_campaign=qr-${code}`)}`)) err(`${qrPath(code)}: Play link without its referrer: ${u}`);
+    if (u.includes(APPLE) && !(/[?&]pt=\d+/.test(u) && u.includes(`ct=qr-${code}&`))) err(`${qrPath(code)}: App Store link without pt/ct=qr-${code}: ${u}`);
+  }
 }
 
 for (const w of warns) console.log('WARN ', w);
